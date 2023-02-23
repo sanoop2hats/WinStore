@@ -1,24 +1,89 @@
-.banner-carousel {
-    .item {
-        height: 350px;
-        text-align: center;
-        padding-top: 30px;
-        background-position: center;
-        background-repeat: no-repeat;
-    }
+.banner-slider-sec {
+    padding: 0px;
 
-    .item-01 {
-        background: url(/assets/img/banner.jpg) no-repeat left center;
-        background-size: cover;
-    }
+    .banner-carousel {
+        .item {
+            height: 418px;
+            text-align: center;
+            padding-top: 50px;
+            background-position: center;
+            background-repeat: no-repeat;
 
-    .item-02 {
-        background: url(/assets/img/banner.jpg) no-repeat left center;
-        background-size: cover;
-    }
+            &.item-01 {
+                background: url(/assets/img/banner.jpg) no-repeat left center;
+                background-size: cover;
+            }
 
-    .item-03 {
-        background: url(/assets/img/banner.jpg) no-repeat left center;
-        background-size: cover;
+            &.item-02 {
+                background: url(/assets/img/banner.jpg) no-repeat left center;
+                background-size: cover;
+            }
+
+            &.item-03 {
+                background: url(/assets/img/banner.jpg) no-repeat left center;
+                background-size: cover;
+            }
+
+            .banner-content {
+                width: 35%;
+                text-align: left;
+                padding-top: 30px;
+
+                .banner-title {
+                    font-size: 57px;
+                    font-weight: 400;
+                    color: $black-color;
+                    line-height: 53px;
+
+                    span {
+                        color: #0AAEB9;
+                    }
+                }
+
+                .view-more {
+                    margin-top: 10px;
+                    float: left;
+                }
+
+            }
+
+        }
+
+        .owl-dots {
+            position: absolute;
+            bottom: 5px;
+            left: 50%;
+            transform: translate(-50%, 0px);
+
+            .owl-dot {
+                &.active {
+                    span {
+                        background-color: #034E53;
+                    }
+                }
+
+                &:hover {
+                    span {
+                        background-color: #034E53;
+                    }
+                }
+
+                span {
+                    width: 36px;
+                    height: 8px;
+                    margin: 5px 7px;
+                    background: #AA9393;
+                    display: block;
+                    -webkit-backface-visibility: visible;
+                    transition: opacity 200ms ease;
+                    border-radius: 30px;
+                }
+
+            }
+        }
+
+
+
+
     }
 }

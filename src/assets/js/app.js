@@ -76,9 +76,9 @@ $(document).on("click", ".sub-item-dropdown .close-btn", function () {
 
 $('#banner-carousel').owlCarousel({
     loop: true,
-    margin: 10,
+    margin: 0,
     nav: false,
-    autoplay: true,
+    autoplay: false,
     dots: true,
     responsive: {
         0: {
@@ -89,6 +89,24 @@ $('#banner-carousel').owlCarousel({
         },
         1000: {
             items: 1
+        }
+    }
+})
+$('#category-carousel').owlCarousel({
+    loop: true,
+    margin: 20,
+    nav: true,
+    autoplay: false,
+    dots: false,
+    responsive: {
+        0: {
+            items: 1
+        },
+        600: {
+            items: 2
+        },
+        1000: {
+            items: 4
         }
     }
 })

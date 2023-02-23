@@ -13,7 +13,7 @@ const clean = require('gulp-clean');
 const webp = require('gulp-webp');
 const include = require('gulp-include');
 const formatHtml = require('gulp-format-html');
-const isProd = process.env.NODE_ENV === 'prod'; 
+const isProd = process.env.NODE_ENV === 'prod';
 
 const htmlFile = [
     'src/*.html'
@@ -32,13 +32,13 @@ function html() {
 }
 
 function ie_css() {
-  return gulp.src('src/assets/sass/ie.scss')
-      .pipe(gulpIf(!isProd, sourcemaps.init()))
-      .pipe(sass().on('error', sass.logError))
-      .pipe(gulpIf(!isProd, sourcemaps.write()))
-      .pipe(gulpIf(isProd, cssmin()))
-      .pipe(concat('ie.min.css'))
-      .pipe(gulp.dest('dist/assets/css/'));
+    return gulp.src('src/assets/sass/ie.scss')
+        .pipe(gulpIf(!isProd, sourcemaps.init()))
+        .pipe(sass().on('error', sass.logError))
+        .pipe(gulpIf(!isProd, sourcemaps.write()))
+        .pipe(gulpIf(isProd, cssmin()))
+        .pipe(concat('ie.min.css'))
+        .pipe(gulp.dest('dist/assets/css/'));
 }
 
 function app_css() {
@@ -51,16 +51,16 @@ function app_css() {
         .pipe(gulp.dest('dist/assets/css/'));
 }
 
- 
+
 
 function plugins_css() {
-  return gulp.src('src/assets/sass/plugins.scss')
-      .pipe(gulpIf(!isProd, sourcemaps.init()))
-      .pipe(sass().on('error', sass.logError))
-      .pipe(gulpIf(!isProd, sourcemaps.write()))
-      .pipe(gulpIf(isProd, cssmin()))
-      .pipe(concat('plugins.min.css'))
-      .pipe(gulp.dest('dist/assets/css/'));
+    return gulp.src('src/assets/sass/plugins.scss')
+        .pipe(gulpIf(!isProd, sourcemaps.init()))
+        .pipe(sass().on('error', sass.logError))
+        .pipe(gulpIf(!isProd, sourcemaps.write()))
+        .pipe(gulpIf(isProd, cssmin()))
+        .pipe(concat('plugins.min.css'))
+        .pipe(gulp.dest('dist/assets/css/'));
 }
 
 function app_js() {
@@ -68,47 +68,47 @@ function app_js() {
         .pipe(include()).on('error', console.log)
         .pipe(concat('app.min.js'))
         .pipe(gulpIf(isProd, uglify({
-          keep_fnames: true,
-          mangle: false,
-          ie8: true,
-          warnings: true,
-          compress: true
+            keep_fnames: true,
+            mangle: false,
+            ie8: true,
+            warnings: true,
+            compress: true
         })))
         .pipe(gulp.dest('dist/assets/js'));
 }
 
 function plugins_js() {
-  return gulp.src('src/assets/js/plugins.js')
-      .pipe(include()).on('error', console.log)
-      .pipe(concat('plugins.min.js'))
-      .pipe(gulpIf(isProd, uglify({
-        keep_fnames: true,
-        mangle: false,
-        ie8: true,
-        warnings: true,
-        compress: true
-      })))
-      .pipe(gulp.dest('dist/assets/js'));
+    return gulp.src('src/assets/js/plugins.js')
+        .pipe(include()).on('error', console.log)
+        .pipe(concat('plugins.min.js'))
+        .pipe(gulpIf(isProd, uglify({
+            keep_fnames: true,
+            mangle: false,
+            ie8: true,
+            warnings: true,
+            compress: true
+        })))
+        .pipe(gulp.dest('dist/assets/js'));
 }
 
 function jquery_js() {
-  return gulp.src('src/assets/js/jquery.js')
-      .pipe(include()).on('error', console.log)
-      .pipe(concat('jquery.min.js'))
-      .pipe(gulpIf(isProd, uglify()))
-      .pipe(gulp.dest('dist/assets/js'));
+    return gulp.src('src/assets/js/jquery.js')
+        .pipe(include()).on('error', console.log)
+        .pipe(concat('jquery.min.js'))
+        .pipe(gulpIf(isProd, uglify()))
+        .pipe(gulp.dest('dist/assets/js'));
 }
 
 function modernizr_js() {
-  return gulp.src('src/assets/js/modernizr.js')
-      .pipe(include()).on('error', console.log)
-      .pipe(concat('modernizr.min.js'))
-      .pipe(gulpIf(isProd, uglify()))
-      .pipe(gulp.dest('dist/assets/js'));
+    return gulp.src('src/assets/js/modernizr.js')
+        .pipe(include()).on('error', console.log)
+        .pipe(concat('modernizr.min.js'))
+        .pipe(gulpIf(isProd, uglify()))
+        .pipe(gulp.dest('dist/assets/js'));
 }
 
 function fonts() {
-    return gulp.src('src/assets/fonts/*')
+    return gulp.src('src/assets/fonts/**/*')
         .pipe(gulp.dest('dist/assets/fonts/'));
 }
 
@@ -119,23 +119,23 @@ function img() {
 }
 
 function uploads() {
-  return gulp.src('src/uploads/**/*')
-      .pipe(gulpIf(isProd, imagemin()))
-      .pipe(gulp.dest('dist/uploads/'));
+    return gulp.src('src/uploads/**/*')
+        .pipe(gulpIf(isProd, imagemin()))
+        .pipe(gulp.dest('dist/uploads/'));
 }
 
 function img_webp() {
-  return gulp.src('src/assets/img/**/*')
-      .pipe(webp({quality: 100}))
-      .pipe(gulpIf(isProd, imagemin()))
-      .pipe(gulp.dest('dist/assets/img/'));
+    return gulp.src('src/assets/img/**/*')
+        .pipe(webp({ quality: 100 }))
+        .pipe(gulpIf(isProd, imagemin()))
+        .pipe(gulp.dest('dist/assets/img/'));
 }
 
 function uploads_webp() {
-return gulp.src('src/uploads/**/*')
-    .pipe(webp({quality: 100}))
-    .pipe(gulpIf(isProd, imagemin()))
-    .pipe(gulp.dest('dist/uploads/'));
+    return gulp.src('src/uploads/**/*')
+        .pipe(webp({ quality: 100 }))
+        .pipe(gulpIf(isProd, imagemin()))
+        .pipe(gulp.dest('dist/uploads/'));
 }
 
 function serve() {
@@ -155,7 +155,7 @@ function watchFiles() {
     gulp.watch('src/**/*.html', gulp.series(html, browserSyncReload));
     gulp.watch('src/assets/sass/**/*.scss', gulp.series(plugins_css, browserSyncReload));
     gulp.watch('src/assets/sass/**/*.scss', gulp.series(app_css, browserSyncReload));
-    
+
     gulp.watch('src/assets/sass/**/*.scss', gulp.series(ie_css, browserSyncReload));
     gulp.watch('src/assets/js/**/*.js', gulp.series(app_js, browserSyncReload));
     gulp.watch('src/assets/js/**/*.js', gulp.series(plugins_js, browserSyncReload));
@@ -168,7 +168,7 @@ function watchFiles() {
 }
 
 function del() {
-    return gulp.src('dist/*', {read: false})
+    return gulp.src('dist/*', { read: false })
         .pipe(clean());
 }
 
