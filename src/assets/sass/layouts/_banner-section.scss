@@ -1,0 +1,24 @@
+.banner-carousel {
+    .item {
+        height: 350px;
+        text-align: center;
+        padding-top: 30px;
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+
+    .item-01 {
+        background: url(/assets/img/banner.jpg) no-repeat left center;
+        background-size: cover;
+    }
+
+    .item-02 {
+        background: url(/assets/img/banner.jpg) no-repeat left center;
+        background-size: cover;
+    }
+
+    .item-03 {
+        background: url(/assets/img/banner.jpg) no-repeat left center;
+        background-size: cover;
+    }
+}

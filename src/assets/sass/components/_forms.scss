@@ -1,0 +1,42 @@
+// Input Fields
+
+/*
+ * Default
+*/
+.form-control {
+    border       : rem(1) solid $white-color;
+    border-radius: rem(0);
+    padding      : rem(3) rem(7);
+    margin-top: rem(12);
+    outline: none;
+    font-size: rem(12);
+
+    @include input-placeholder {
+        color:  $black-color;
+    }
+
+    &:focus {
+        box-shadow  : none;
+        border-color: $black-color;
+    }
+
+    .disbled {
+        background-color: #f1f1f1;
+    }
+
+}
+select{
+    width: 100%;
+    border       : rem(1) solid $white-color;
+    padding      : 0 rem(7);
+    border-radius: rem(0);
+    outline: none; 
+    margin-top: rem(12); 
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    font-size: rem(12);
+    background:$white-color url(../../../images/icons/select_icon.png) no-repeat center right;
+    background-size: 24px auto;
+}
+ 

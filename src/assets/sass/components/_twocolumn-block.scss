@@ -1,0 +1,15 @@
+.two-column-block {
+    @include flex(); 
+    align-items: flex-start;
+    @include mobile-lg(){
+        flex-direction: column;
+    }
+    .equal-block {
+         width:50%; 
+         
+        @include mobile-lg(){
+            width:100%; 
+        }
+    }
+    
+}

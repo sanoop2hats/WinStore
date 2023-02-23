@@ -1,0 +1,246 @@
+ .sub-nav {
+     background: #0E3B3E;
+
+     .navbar-collapse {
+         justify-content: space-between;
+     }
+
+     .navbar-nav {
+         align-items: center;
+     }
+
+     .navbar-nav li a {
+         font-size: 13px;
+         color: $white-color;
+         padding: 5px 35px !important;
+     }
+
+     .navbar-nav.nav-left-item li a.brouse-by-category {
+         font-size: 17px;
+         padding: 5px 35px 5px 0px !important;
+
+         img {
+             margin-top: -5px;
+             margin-right: 10px;
+         }
+     }
+
+     .navbar-nav.right-sm-item li a {
+         font-size: 15px;
+         color: $white-color;
+         padding: 5px 15px !important;
+     }
+
+     .navbar-nav.right-sm-item li a.linkedin {
+         padding: 5px 0px 5px 15px !important;
+     }
+
+ }
+
+ //  nav dropdown css
+
+ .nav-main-dropdowns {
+     background-color: $primary-color;
+     max-height: 0px;
+     overflow: hidden;
+     transition: 0.4s;
+     opacity: 0;
+
+     &.active_dropdown {
+         max-height: 1000px;
+         overflow: visible;
+         transition: 0.4s;
+         opacity: 1;
+     }
+
+     .container-width {
+         max-width: 1330px;
+         margin: 0 auto;
+     }
+
+     .nav-main-dropdowns--item-sec {
+         display: flex;
+         justify-content: space-between;
+         gap: 5px;
+         padding: 15px 0px;
+
+         .nav-main-dropdowns--item {
+             width: 77%;
+             position: relative;
+         }
+     }
+
+     .main-dropdown-ul {
+         display: flex;
+         justify-content: space-between;
+         padding-bottom: 20px;
+
+         li {
+             font-size: 13px;
+             line-height: 53px;
+             color: $white-color;
+             display: flex;
+
+             a {
+                 color: $white-color;
+                 padding: 7px 10px;
+                 border-radius: 6px;
+
+                 &:hover {
+                     background-color: $white-color;
+                     color: $black-color;
+
+                     svg path {
+                         stroke: $black-color;
+                     }
+                 }
+
+                 &.active {
+                     background-color: $white-color;
+                     color: $black-color;
+
+                     svg path {
+                         stroke: $black-color;
+                     }
+                 }
+
+                 svg {
+                     margin-top: -2px;
+                     margin-left: 10px;
+                 }
+             }
+         }
+     }
+
+     .offer-dropdown-ul {
+         display: flex;
+         justify-content: space-between;
+         width: 60%;
+         margin: 0 auto;
+
+         li {
+             font-size: 16px;
+             line-height: 53px;
+             color: $white-color;
+             display: flex;
+
+             a {
+                 color: $white-color;
+                 padding: 7px 10px;
+                 border-radius: 6px;
+
+                 &:hover {
+                     //  background-color: #fff;
+                     color: $white-color;
+
+                 }
+             }
+
+
+
+         }
+
+     }
+
+     .nav-main-dropdowns--help {
+         width: 22%;
+         padding-left: 60px;
+         border-left: 1px solid #0E3B3E;
+         position: relative;
+
+         h4 {
+             color: #14B1F0;
+             font-size: 16px;
+             margin-top: 0px;
+             margin-bottom: 0px;
+         }
+
+         a {
+             color: #fff;
+             font-size: 12px;
+             color: $white-color;
+         }
+
+         p {
+             position: absolute;
+             top: 0px;
+             right: 0px;
+
+             a:hover path {
+                 fill: #000;
+             }
+         }
+     }
+ }
+
+ //  nav sub category dropdown
+ .sub-item-dropdown {
+     position: absolute;
+     width: 100%;
+     top: 40%;
+     opacity: 1;
+     visibility: hidden;
+     z-index: -1;
+     transition: 0.3s;
+     display: none;
+
+     &.active_sub_tab {
+         opacity: 1;
+         visibility: visible;
+         z-index: 9;
+         display: block;
+     }
+
+     .close-btn {
+         position: absolute;
+         right: 10px;
+         top: 10px;
+
+         a:hover svg path {
+             fill: $black-color
+         }
+     }
+
+     .dropdown-category-sec {
+         display: flex;
+         justify-content: space-between;
+         max-width: 85%;
+         margin-right: 0;
+         margin-left: auto;
+         background: #0E3B3E;
+         padding: 20px 60px;
+
+         p {
+             font-weight: 700;
+             font-size: 13px;
+
+             color: #0AAEB9;
+
+         }
+
+         ul {
+             margin-top: 15px;
+
+             li a {
+                 font-size: 12px;
+                 color: $white-color;
+                 line-height: 37px;
+
+                 &:hover {
+                     text-decoration: underline;
+                 }
+             }
+         }
+
+
+
+
+         .dropdown-category.fashiom-image {
+             width: 40%;
+
+             img {
+                 width: 100%;
+             }
+         }
+     }
+ }

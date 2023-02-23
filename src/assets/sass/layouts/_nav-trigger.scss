@@ -1,0 +1,460 @@
+ .nav-trigger {
+     width: rem(64);
+     height: rem(64);
+     float: right;
+     display: none;
+     position: absolute;
+     right: rem(15);
+     top: rem(30);
+     padding: rem(23) rem(17);
+
+     @include mobile-lg() {
+         display: block;
+     }
+
+     span {
+         width: 30px;
+         height: 2px;
+         background: #242b2e;
+         @include flex;
+         position: relative;
+
+         &:nth-child(1) {
+             margin: 0;
+         }
+
+         &:nth-child(2) {
+             margin-top: 6px;
+             opacity: 1;
+         }
+
+         &:nth-child(3) {
+             margin-top: 6px;
+         }
+     }
+ }
+
+ .nav-trigger.highlight {
+     span {
+         &:nth-child(1) {
+             opacity: 0;
+         }
+
+         &:nth-child(2) {
+             @include rotate(45deg);
+             top: 0px;
+         }
+
+         &:nth-child(3) {
+             @include rotate(-45deg);
+             top: 0px;
+             margin-top: -2px;
+         }
+
+         background: #242b2e;
+     }
+ }
+
+
+ //  profile box start
+
+ .profile-box {
+     background: $white-color;
+     box-shadow: 0px 4px 4px rgb(0 0 0 / 25%);
+     position: absolute;
+     right: 0;
+     z-index: 9;
+     width: 358px;
+     top: -9999px;
+
+     &.active-profile-box {
+         opacity: 1;
+         top: 46px;
+         transform: translateY(18px);
+         transition: transform 0.4s, opacity 0.4s;
+         overflow: hidden;
+     }
+
+     .profile-details {
+         background-color: #0E3B3E;
+         box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.25);
+         border-radius: 0px;
+         display: flex;
+         gap: 15px;
+         padding: 20px;
+
+         .profile-image {
+             position: relative;
+
+             &::before {
+                 content: "";
+                 height: 13px;
+                 width: 13px;
+                 background: #8BCD00;
+                 position: absolute;
+                 top: 5px;
+                 right: 2px;
+                 border-radius: 50%;
+             }
+
+             img {
+                 border-radius: 50%;
+             }
+
+
+         }
+
+         .profile-close {
+             position: absolute;
+             right: 10px;
+             top: 10px;
+
+             a:hover path {
+                 fill: $black-color
+             }
+         }
+
+
+         h4 {
+             font-weight: 400;
+             font-size: 14px;
+             line-height: 14px;
+             color: $white-color;
+         }
+
+         .logout-btn {
+             background: #FFFFFF;
+             border-radius: 29px;
+             padding: 8px 20px;
+             color: #285A87;
+             font-size: 11px;
+             margin-top: 5px;
+             float: left;
+         }
+     }
+
+     .profile-setings-support {
+         padding: 20px 20px 20px;
+
+         .profile-box-links {
+             position: relative;
+             padding: 3px 40px;
+
+
+             //  border-bottom: 1px solid #E9E9E9;
+             //  margin-top: 20px;
+             &.winstore-settings {
+                 border-bottom: 1px solid #E9E9E9;
+                 border-top: 1px solid #E9E9E9;
+                 //  margin-top: 20px;
+                 padding: 20px 40px 20px;
+
+                 a {
+                     margin-top: 15px;
+                 }
+
+                 .profile-link-title {
+                     color: #3C8CD6;
+                 }
+             }
+
+             a {
+                 display: flex;
+                 gap: 15px;
+                 align-items: center;
+                 color: #7A7A7A;
+             }
+
+             p {
+                 color: #7A7A7A;
+                 font-size: 14px;
+             }
+         }
+     }
+ }
+
+
+ //  cart list box starts
+ .cartList-box {
+     background: #fff;
+     box-shadow: 0px 4px 4px rgb(0 0 0 / 25%);
+     position: absolute;
+     right: 0;
+     z-index: 9;
+     width: 358px;
+     top: -9999px;
+
+     &.active-cartlist-box {
+         opacity: 1;
+         top: 46px;
+         transform: translateY(18px);
+         transition: transform 0.4s, opacity 0.4s;
+         overflow: hidden;
+     }
+
+     .cartList-header {
+         background-color: #0E3B3E;
+         box-shadow: 0px 4px 8px rgb(0 0 0 / 25%);
+         border-radius: 0px;
+
+         padding: 20px 30px 10px;
+
+         .cartList-header-text {
+             display: flex;
+             gap: 15px;
+
+             .cartlist-icon {
+                 position: relative;
+
+                 .cart-count {
+                     color: #FDDE3B;
+                     font-weight: 400;
+                     font-size: 15px;
+                     line-height: 18px;
+                     position: absolute;
+                     left: 20%;
+                     top: -14px;
+                 }
+
+                 .cart-text {
+                     padding-left: 5px;
+                     font-size: 15px;
+                 }
+             }
+
+
+         }
+
+         .cart-close {
+             position: absolute;
+             right: 10px;
+             top: 10px;
+
+             a:hover path {
+                 fill: $black-color
+             }
+         }
+
+         p {
+             font-size: 17px;
+         }
+
+         h3 {
+             font-size: 26px;
+             color: $white-color;
+             margin-bottom: 0px;
+             margin-top: 5px;
+         }
+     }
+
+     .cartList-body {
+         position: relative;
+         padding: 0px 20px;
+
+         .cart-item {
+             display: flex;
+             gap: 15px;
+             align-items: center;
+             padding-top: 20px;
+             padding-bottom: 20px;
+             border-bottom: 1px solid #C4C4C4;
+
+             &:last-child {
+                 border-bottom: 0px;
+             }
+
+             .cart-item-image {
+                 width: 30%;
+
+                 img {
+                     width: 100%;
+                 }
+             }
+
+             .cart-item-details {
+                 width: 70%;
+                 padding-right: 30px;
+                 position: relative;
+
+                 p {
+                     font-weight: 400;
+                     font-size: 14px;
+                     color: $black-color;
+                     line-height: 25px;
+                 }
+
+                 .delete-icon {
+                     position: absolute;
+                     top: 0px;
+                     right: 0px;
+                 }
+             }
+         }
+     }
+ }
+
+ //  sign in form
+ .signin-form-box {
+     position: relative;
+     min-height: 400px;
+     background-color: $white-color;
+     position: absolute;
+     right: 0;
+     z-index: 99;
+     width: 358px;
+     top: -9999px;
+     width: 100%;
+
+     &.active-signin-box {
+         opacity: 1;
+         top: 46px;
+         transform: translateY(18px);
+         transition: transform 0.4s, opacity 0.4s;
+         overflow: hidden;
+     }
+
+     .form-img-bg {
+         background: url(/assets/img/signin-bg.jpg) no-repeat left center;
+         background-size: cover;
+         //  height: 250px;
+         text-align: center;
+         padding-top: 30px;
+         background-position-y: -400px;
+         background-repeat: no-repeat;
+
+         h2 {
+             font-weight: 400;
+             font-size: 32px;
+             color: $white-color;
+             margin-top: 10px;
+             font-family: $font-sub;
+         }
+
+         .signin-form-div {
+             background-color: $white-color;
+             filter: drop-shadow(0px 1px 15px rgba(0, 0, 0, 0.42));
+             border-radius: 23px;
+             overflow: hidden;
+             padding: 60px;
+             width: 40%;
+             margin: 40px auto;
+
+             .rememberme-flex {
+                 display: flex;
+                 align-items: center;
+                 justify-content: space-between;
+             }
+
+             .form-group {
+                 position: relative;
+                 margin-bottom: 25px;
+
+
+                 .input-icon {
+                     position: absolute;
+                     left: 20px;
+                     top: 12px;
+
+                     img {
+                         width: 30px;
+                         height: 28px;
+                     }
+                 }
+
+                 #rememberMe {
+                     display: none;
+                 }
+
+                 .rememberMe {
+                     position: relative;
+                     cursor: pointer;
+                     font-size: 14px;
+                     font-family: "Roboto", sans-serif;
+                     font-weight: 400;
+
+                     &:before {
+
+                         content: "";
+                         -webkit-appearance: none;
+                         background-color: transparent;
+                         border: 1px solid #D4C5C5;
+                         padding: 8px;
+                         display: inline-block;
+                         position: relative;
+                         vertical-align: middle;
+                         cursor: pointer;
+                         margin-right: 5px;
+                         background: #FAFAFA;
+                         border-radius: 2px;
+                         margin-top: -2px;
+
+                     }
+
+
+                 }
+
+                 &.rememberme-div {
+                     //  width: 50%;
+                     //  float: left;
+                     margin-bottom: 10px;
+
+                     a {
+                         font-size: 14px;
+                         font-family: "Roboto", sans-serif;
+                         font-weight: 400;
+                         color: #0386D0;
+                     }
+                 }
+
+                 &.text-left {
+                     text-align: left;
+                 }
+
+                 input:checked+label:after {
+                     content: '';
+                     display: block;
+                     position: absolute;
+                     top: 2px;
+                     left: 9px;
+                     width: 6px;
+                     height: 14px;
+                     border: solid #0079bf;
+                     border-width: 0 2px 2px 0;
+                     transform: rotate(45deg);
+                 }
+             }
+
+             .form-control {
+                 background: #FFFFFF;
+                 box-shadow: 0px 0px 18px rgba(0, 0, 0, 0.25);
+                 border-radius: 9px;
+                 padding: 15px 15px 15px 60px;
+                 font-family: $font-sub;
+                 font-weight: 300;
+                 font-size: 15px;
+
+                 &::placeholder {
+                     color: #A6A6A6 !important;
+                     opacity: 1;
+                 }
+
+                 &:-ms-input-placeholder {
+                     color: #A6A6A6 !important;
+                 }
+
+                 &::-ms-input-placeholder {
+                     color: #A6A6A6 !important;
+                 }
+             }
+
+             .btn-submit {
+                 padding: 15px;
+                 width: 100%;
+                 border-radius: 0px;
+                 background: #15ADB7;
+                 color: #fff;
+                 box-shadow: -9px 9px 18px rgba(110, 75, 10, 0.11), 9px -9px 18px rgba(110, 75, 10, 0.02), inset 1px 1px 2px rgba(255, 255, 36, 0.3), inset -1px -1px 2px rgba(110, 75, 10, 0.5);
+             }
+         }
+     }
+ }

@@ -1,0 +1,51 @@
+section {
+  overflow: hidden;
+  padding: rem(20) 0 rem(45) ;
+  
+  @include mobile-lg(){
+    padding: rem(25) 0 rem(30);
+  }
+
+  &.ptop-0 {
+    padding-top: 0;
+  }
+  &.pbottom-0 {
+    padding-bottom: 0;
+  }
+  &.light-bg {
+    background: $secondary-color; 
+  }
+  &.contact-section{
+    background: $primary-color;
+    padding: rem(67) 0 rem(80);
+    .container{
+      max-width:rem(1000) ;
+    }
+    @include mobile-lg(){ 
+      padding: rem(40) 0 rem(40);
+    }
+  }
+  &.content-section {
+    padding: rem(25) 0 rem(60);
+    
+    @include mobile-lg(){
+      padding: rem(25) 0 rem(30);
+    }
+  }
+  &.banner-section {
+    padding: 0;
+    background: $primary-color;
+  }
+  &.secondary-bg {
+    background: $secondary-color;
+  }
+  &.icon-section {
+    background: $secondary-color url(../../images/logo_icon.svg) no-repeat left center;
+    background-size: auto 100%;
+    padding: rem(45) 0;
+    @include mobile-lg(){ 
+      padding: rem(45) 0 0 0;
+    }
+
+  }
+}
