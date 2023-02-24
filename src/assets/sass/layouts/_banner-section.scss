@@ -9,40 +9,67 @@
             background-position: center;
             background-repeat: no-repeat;
 
+            @include mobile-lg() {
+                height: 170px;
+                background-position-x: -170px !important;
+            }
+
             &.item-01 {
-                background: url(/assets/img/banner.jpg) no-repeat left center;
+                background: url(/assets/img/banner.jpg) no-repeat right center;
                 background-size: cover;
             }
 
             &.item-02 {
-                background: url(/assets/img/banner.jpg) no-repeat left center;
+                background: url(/assets/img/banner.jpg) no-repeat right center;
                 background-size: cover;
             }
 
             &.item-03 {
-                background: url(/assets/img/banner.jpg) no-repeat left center;
+                background: url(/assets/img/banner.jpg) no-repeat right center;
                 background-size: cover;
             }
 
             .banner-content {
-                width: 35%;
+                width: 45%;
                 text-align: left;
                 padding-top: 30px;
+
+                @include mobile-lg() {
+                    width: 60%;
+                }
 
                 .banner-title {
                     font-size: 57px;
                     font-weight: 400;
                     color: $black-color;
                     line-height: 53px;
+                    margin-bottom: 15px;
+
+                    @include mobile-lg() {
+                        font-size: 22px;
+                        line-height: 27px;
+                    }
 
                     span {
                         color: #0AAEB9;
                     }
                 }
 
+                p {
+                    font-weight: 400;
+                    font-size: 14px;
+                    line-height: 20px;
+                    color: #000;
+                    padding-right: 60px;
+                }
+
                 .view-more {
                     margin-top: 10px;
                     float: left;
+                    border-radius: 5px;
+                    padding: 10px 40px;
+                    font-size: 15px;
+                    color: #fff;
                 }
 
             }
@@ -74,7 +101,6 @@
                     margin: 5px 7px;
                     background: #AA9393;
                     display: block;
-                    -webkit-backface-visibility: visible;
                     transition: opacity 200ms ease;
                     border-radius: 30px;
                 }

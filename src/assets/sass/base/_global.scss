@@ -102,8 +102,10 @@ h5,
 }
 
 p {
-  font-size: rem(16);
-  line-height: rem(22);
+  // font-size: rem(16);
+  // line-height: rem(22);
+  font-size: 14px;
+  line-height: 20px;
   font-family: $font-regular;
   margin: 0;
 }
@@ -114,6 +116,29 @@ p+p {
 
 strong {
   font-family: $font-bold;
+}
+
+.sub-sec-title {
+  font-weight: 400;
+  font-size: 28px;
+  line-height: 34px;
+  font-family: $font-regular;
+  color: $black-color;
+
+  span {
+    color: #00CAD7;
+  }
+}
+
+.special-offer-title {
+  font-size: 35px;
+  line-height: 45px;
+  font-weight: 400;
+  color: #C82020;
+
+  span {
+    color: $black-color
+  }
 }
 
 .container {
