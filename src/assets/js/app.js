@@ -78,8 +78,10 @@ $('#banner-carousel').owlCarousel({
     loop: true,
     margin: 0,
     nav: false,
-    autoplay: false,
+    autoplay: true,
     dots: true,
+    autoplayTimeout: 8000,
+    smartSpeed: 2500,
     responsive: {
         0: {
             items: 1
@@ -96,15 +98,29 @@ $('#category-carousel').owlCarousel({
     loop: true,
     margin: 20,
     nav: true,
-    autoplay: false,
+    autoplay: true,
     dots: false,
+    autoplayTimeout: 6500,
+    smartSpeed: 2500,
     navText: ['<svg xmlns="http://www.w3.org/2000/svg" width="20" height="36" viewBox="0 0 20 36" fill="none"><path d="M18.25 34.5L1.75 18L18.25 1.5" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg> ', ' <svg xmlns="http://www.w3.org/2000/svg" width="20" height="36" viewBox="0 0 20 36" fill="none"><path d="M1.75 34.5L18.25 18L1.75 1.5" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg> '],
     responsive: {
         0: {
-            items: 1
+            items: 1,
+            dots: true
+        },
+        500: {
+            items: 2,
+            margin: 10,
+            dots: true,
+            smartSpeed: 1000,
+            nav: false
         },
         600: {
-            items: 2
+            items: 3,
+            margin: 10,
+            dots: true,
+            smartSpeed: 1000,
+            nav: false
         },
         1000: {
             items: 4
@@ -116,17 +132,37 @@ $('#deal-of-the-day-carousel').owlCarousel({
     loop: true,
     margin: 20,
     nav: true,
-    autoplay: false,
+    autoplay: true,
     dots: false,
+    autoplayTimeout: 6500,
+    smartSpeed: 1000,
     navText: ['<svg xmlns="http://www.w3.org/2000/svg" width="20" height="36" viewBox="0 0 20 36" fill="none"><path d="M18.25 34.5L1.75 18L18.25 1.5" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg> ', ' <svg xmlns="http://www.w3.org/2000/svg" width="20" height="36" viewBox="0 0 20 36" fill="none"><path d="M1.75 34.5L18.25 18L1.75 1.5" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg> '],
     responsive: {
         0: {
-            items: 1
+            items: 2,
+            margin: 0,
+            dots: true,
+            nav: false
+        },
+        500: {
+            items: 2,
+            margin: 10,
+            dots: true,
+            smartSpeed: 1000,
+            nav: false
         },
         600: {
-            items: 2
+            items: 2,
+            margin: 10,
+            dots: true,
+            smartSpeed: 1000,
+            nav: false
         },
         1000: {
+            items: 2,
+            margin: 10
+        },
+        1200: {
             items: 3
         }
     }
@@ -137,6 +173,8 @@ $('.product-category-tabs-carousel').owlCarousel({
     nav: true,
     autoplay: false,
     dots: false,
+    autoplayTimeout: 2000,
+    smartSpeed: 2500,
     // autoWidth: true,
     // navText: ['<svg xmlns="http://www.w3.org/2000/svg" width="20" height="36" viewBox="0 0 20 36" fill="none"><path d="M18.25 34.5L1.75 18L18.25 1.5" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg> ', ' <svg xmlns="http://www.w3.org/2000/svg" width="20" height="36" viewBox="0 0 20 36" fill="none"><path d="M1.75 34.5L18.25 18L1.75 1.5" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg> '],
     responsive: {
@@ -145,9 +183,13 @@ $('.product-category-tabs-carousel').owlCarousel({
             margin: 20
         },
         600: {
-            items: 2
+            items: 2,
+            margin: 20
         },
         1000: {
+            items: 3
+        },
+        1200: {
             items: 3
         }
     }
@@ -177,4 +219,32 @@ $(document).ready(function () {
     }
 
     setInterval(function () { makeTimer(); }, 1000);
+});
+
+$(document).on("click", ".brouse_by_category", function () {
+
+    $(".nav-dropdown-set1").toggleClass("active");
+});
+$(document).on("click", ".hamburger-menu-mob", function () {
+
+    $(".mobile-nav").toggleClass("active");
+});
+
+$(document).on("click", ".nav-dropdown-set1 li a", function () {
+    // alert();
+    var url = $(this).data("url");
+    if ($(url).hasClass("active_sub_tab")) {
+        // alert("no")
+        $(url).removeClass("active_sub_tab")
+        $(".sub-item-dropdown").removeClass("active_sub_tab");
+    } else {
+        $(".sub-item-dropdown").removeClass("active_sub_tab");
+        $(url).addClass("active_sub_tab");
+        $(".nav-main-dropdowns ").css({ "overflow": "visible", "opacity": "1" })
+    }
+    // $(".main-dropdown-ul li a").removeClass("active")
+    // $(this).addClass("active")
+    // var url = $(this).data("url");
+    // $(".sub-item-dropdown").removeClass("active_sub_tab");
+    // $(url).addClass("active_sub_tab");
 });

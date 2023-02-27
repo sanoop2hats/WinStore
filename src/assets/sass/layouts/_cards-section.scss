@@ -5,7 +5,22 @@
     position: relative;
     width: 17%;
 
+
+
+    @include tablet-lg() {
+        padding: 7px;
+    }
+
+    @include tablet-md() {
+        width: 30%;
+        padding: 15px;
+    }
+
     @include mobile-lg() {
+        width: 31%;
+    }
+
+    @include mobile-md() {
         width: 49%;
     }
 
@@ -42,16 +57,24 @@
         font-weight: 400;
         font-size: 15px;
         line-height: 18px;
-        color: #034E53;
+        color: $light-blue;
         margin-top: 10px;
+
+        @include tablet-lg() {
+            font-size: 13px;
+        }
 
         &:first-child {
             margin-top: 0px;
         }
 
         small {
-            color: #000;
+            color: $black-color;
             font-size: 12px;
+
+            @include tablet-lg() {
+                font-size: 10px;
+            }
         }
     }
 
@@ -62,6 +85,10 @@
         align-items: center;
 
         @include mobile-lg() {
+            gap: 5px;
+        }
+
+        @include tablet-lg() {
             gap: 5px;
         }
 
@@ -109,7 +136,7 @@
 }
 
 .add-cart-card-btn {
-    background: #15ADB7;
+    background: $primary-content-color;
     padding: 9px 0px;
     width: 100%;
     float: left;
@@ -121,5 +148,9 @@
     &:hover {
         background-color: $primary-color;
         color: $white-color;
+    }
+
+    @include tablet-md() {
+        font-size: 13px;
     }
 }

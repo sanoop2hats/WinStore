@@ -27,6 +27,13 @@
     @include tablet-lg() {
       padding: 10px 40px;
     }
+
+    @include mobile-lg() {
+
+      padding: 5px 20px !important;
+      font-size: 11px !important;
+
+    }
   }
 
   &:hover {

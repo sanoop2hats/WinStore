@@ -22,7 +22,7 @@ body {
   line-height: rem(24);
   min-height: 100%;
   letter-spacing: -1%;
-  color: $secondary-color;
+  color: $header-secondary-color;
 }
 
 
@@ -128,6 +128,7 @@ strong {
   span {
     color: #00CAD7;
   }
+
 }
 
 .special-offer-title {
@@ -139,6 +140,16 @@ strong {
   span {
     color: $black-color
   }
+
+  @include tablet-lg() {
+    font-size: 27px;
+    line-height: 34px;
+  }
+
+  @include tablet-md() {
+    font-size: 25px;
+    line-height: 30px;
+  }
 }
 
 .container {
@@ -148,7 +159,7 @@ strong {
   margin: auto;
 
   @include desktop-xs() {
-    max-width: rem(1020);
+    max-width: rem(1180);
   }
 
   @include tablet-lg() {

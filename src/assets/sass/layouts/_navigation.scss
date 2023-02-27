@@ -1,6 +1,10 @@
  .sub-nav {
      background: #0E3B3E;
 
+     @include mobile-lg() {
+         display: none;
+     }
+
      .navbar-collapse {
          justify-content: space-between;
      }
@@ -13,11 +17,20 @@
          font-size: 13px;
          color: $white-color;
          padding: 5px 35px !important;
+
+         @include tablet-lg() {
+             padding: 5px 17px !important;
+         }
      }
 
      .navbar-nav.nav-left-item li a.brouse-by-category {
          font-size: 17px;
          padding: 5px 35px 5px 0px !important;
+
+         @include tablet-lg() {
+             padding: 5px 17px 5px 0px !important;
+             font-size: 15px;
+         }
 
          img {
              margin-top: -5px;
@@ -29,6 +42,10 @@
          font-size: 15px;
          color: $white-color;
          padding: 5px 15px !important;
+
+         &:hover {
+             color: $off-blue;
+         }
      }
 
      .navbar-nav.right-sm-item li a.linkedin {
@@ -46,6 +63,10 @@
      transition: 0.4s;
      opacity: 0;
 
+     @include mobile-lg() {
+         transition: 0s;
+     }
+
      &.active_dropdown {
          max-height: 1000px;
          overflow: visible;
@@ -56,6 +77,10 @@
      .container-width {
          max-width: 1330px;
          margin: 0 auto;
+
+         @include tablet-lg() {
+             max-width: 992px;
+         }
      }
 
      .nav-main-dropdowns--item-sec {
@@ -67,6 +92,10 @@
          .nav-main-dropdowns--item {
              width: 77%;
              position: relative;
+
+             @include mobile-lg() {
+                 width: 100%;
+             }
          }
      }
 
@@ -85,6 +114,11 @@
                  color: $white-color;
                  padding: 7px 10px;
                  border-radius: 6px;
+
+                 @include tablet-lg() {
+                     font-size: 11px;
+                     padding: 7px 5px;
+                 }
 
                  &:hover {
                      background-color: $white-color;
@@ -118,6 +152,10 @@
          width: 60%;
          margin: 0 auto;
 
+         @include tablet-lg() {
+             width: 80%;
+         }
+
          li {
              font-size: 16px;
              line-height: 53px;
@@ -129,8 +167,12 @@
                  padding: 7px 10px;
                  border-radius: 6px;
 
+                 @include tablet-lg() {
+                     font-size: 13px;
+                 }
+
                  &:hover {
-                     //  background-color: #fff;
+                     //  background-color: $white-color;
                      color: $white-color;
 
                  }
@@ -149,14 +191,14 @@
          position: relative;
 
          h4 {
-             color: #14B1F0;
+             color: $off-blue;
              font-size: 16px;
              margin-top: 0px;
              margin-bottom: 0px;
          }
 
          a {
-             color: #fff;
+             color: $white-color;
              font-size: 12px;
              color: $white-color;
          }
@@ -167,7 +209,7 @@
              right: 0px;
 
              a:hover path {
-                 fill: #000;
+                 fill: $black-color;
              }
          }
      }
@@ -184,11 +226,28 @@
      transition: 0.3s;
      display: none;
 
+     @include mobile-lg() {
+         transition: 0s;
+     }
+
      &.active_sub_tab {
          opacity: 1;
          visibility: visible;
          z-index: 9;
          display: block;
+
+         @include mobile-lg() {
+             z-index: 99;
+             width: 100%;
+
+             &.electronics-dropdown {
+                 top: 77px;
+             }
+
+             &.fashiom-dropdown {
+                 top: 120px;
+             }
+         }
      }
 
      .close-btn {
@@ -198,6 +257,10 @@
 
          a:hover svg path {
              fill: $black-color
+         }
+
+         @include mobile-lg() {
+             top: -30px;
          }
      }
 
@@ -210,11 +273,31 @@
          background: #0E3B3E;
          padding: 20px 60px;
 
+         @include tablet-lg() {
+             max-width: 100%;
+             padding: 20px 30px;
+         }
+
+         @include mobile-lg() {
+             flex-wrap: wrap;
+             row-gap: 20px;
+
+             .dropdown-category {
+                 width: 50%;
+
+                 &.fashiom-image {
+                     display: none;
+                 }
+             }
+
+             padding: 20px 20px;
+         }
+
          p {
              font-weight: 700;
              font-size: 13px;
 
-             color: #0AAEB9;
+             color: $light-blue;
 
          }
 

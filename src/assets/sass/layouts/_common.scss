@@ -1,3 +1,7 @@
+.f-left {
+    float: left;
+}
+
 .product-category-tabs {
     width: 65%;
 
@@ -23,6 +27,10 @@
             color: $black-color;
             padding: 10px 20px 10px 0px;
             text-transform: uppercase;
+
+            @include tablet-md() {
+                font-size: 14px !important;
+            }
 
             &:hover {
                 &::after {
@@ -66,6 +74,12 @@
         }
     }
 
+    .owl-nav {
+        position: absolute;
+        right: 0px;
+        top: -15px;
+    }
+
     @include mobile-lg() {
         .product-category-tabs-carousel .owl-nav {
             position: absolute;
@@ -79,4 +93,60 @@
     font-size: 13px;
     color: #697475;
     text-decoration: line-through;
+
+    @include tablet-lg() {
+        font-size: 10px !important;
+    }
+
+    @include tablet-md() {
+        font-size: 11px !important;
+    }
+}
+
+@include tablet-lg() {
+    .owl-carousel {
+        .owl-dots {
+            .owl-dot {
+                span {
+                    background: #AA9393;
+                    width: 36px;
+                    height: 8px;
+                }
+
+                &.active {
+                    span {
+                        background-color: #034E53;
+                    }
+                }
+            }
+        }
+    }
+
+}
+
+@include mobile-lg() {
+    .owl-carousel {
+        .owl-dots {
+            .owl-dot {
+                span {
+                    background: #AA9393;
+                    width: 10px;
+                    height: 10px;
+                }
+
+                &.active {
+                    span {
+                        background-color: #034E53;
+                    }
+                }
+            }
+        }
+    }
+
+    section {
+        .container {
+            padding-left: 20px;
+            padding-right: 20px;
+        }
+    }
 }

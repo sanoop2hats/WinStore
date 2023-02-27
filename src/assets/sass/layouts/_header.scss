@@ -11,9 +11,35 @@
         justify-content: space-between;
         align-items: center;
 
+        .hamburger-menu-mob {
+            display: none;
+        }
+
+        @include tablet-md() {
+            .nav-logo {
+                width: 18%;
+
+                img {
+                    width: 130px;
+                    height: auto;
+                }
+            }
+        }
+
         @include mobile-lg() {
             flex-direction: column;
             align-items: flex-start;
+
+            .nav-logo {
+                width: 40%;
+                margin-left: 50px;
+            }
+
+            .hamburger-menu-mob {
+                display: block;
+                position: absolute;
+                left: 20px;
+            }
         }
     }
 
@@ -32,6 +58,11 @@
     .nav-form {
         width: 40%;
 
+        @include tablet-lg() {
+            padding-right: 10px;
+            padding-left: 10px;
+        }
+
         @include mobile-lg() {
             width: 100%;
             margin-top: 10px;
@@ -45,6 +76,10 @@
 
         .form-group.form-ddn-wrapper {
             width: 30%;
+
+            @include tablet-md() {
+                width: 40%;
+            }
         }
 
         .form-group {
@@ -59,6 +94,11 @@
                 padding-left: 15px;
                 border-radius: 0px 6px 6px 0px;
                 color: #ABA3A3;
+
+                @include tablet-md() {
+                    padding-left: 10px;
+                    font-size: 10px;
+                }
             }
 
             ::placeholder {
@@ -86,6 +126,10 @@
                 align-items: center;
                 justify-content: center;
 
+                @include tablet-md() {
+                    width: 30px;
+                }
+
                 img {
                     width: 24px;
                 }
@@ -104,9 +148,23 @@
             line-height: 16px;
             color: #ABA3A3;
 
+            @include tablet-lg() {
+                font-size: 11px;
+                padding-left: 10px;
+            }
+
+            @include tablet-md() {
+                font-size: 10px;
+                padding-left: 7px;
+            }
+
             .ddn-indicator {
                 position: absolute;
                 right: 15px;
+
+                @include tablet-lg() {
+                    right: 7px;
+                }
 
                 img {
                     width: 10px;
@@ -190,6 +248,10 @@
         align-items: center;
         font-size: 11px;
 
+        @include tablet-lg() {
+            font-size: 10px;
+        }
+
         span {
             width: 25px;
 
@@ -208,6 +270,10 @@
         flex-direction: column;
         gap: 5px;
 
+        @include tablet-lg() {
+            width: 13%;
+        }
+
         @include mobile-lg() {
             display: none;
         }
@@ -221,12 +287,23 @@
         span img {
             margin-right: 7px;
         }
+
+        @include tablet-lg() {
+            font-size: 10px;
+        }
     }
 
     .user-like-cart {
         display: flex;
         justify-content: space-between;
         width: 13%;
+
+        @include tablet-lg() {
+            img {
+                width: 17px;
+                height: auto;
+            }
+        }
 
         @include mobile-lg() {
             width: 35%;
