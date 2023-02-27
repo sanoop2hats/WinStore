@@ -1,4 +1,4 @@
 WinStore Shopping website 
 ===
 
-## Shot Computer & experience 
+## Shope Computer & experience 
