@@ -1,5 +1,5 @@
 {
-  "name": "project-name",
+  "name": "winstore",
   "version": "1.0.0",
   "description": "project description",
   "author": "author",
@@ -44,5 +44,8 @@
   },
   "dependencies": {
     "node-sass": "^7.0.1"
-  }
+  },
+  "keywords": [
+    "e-commerce"
+  ]
 }
