@@ -1,9 +1,15 @@
-
-
+$(document).ready(function () {
+    $('#hamburger-menu-icon').click(function () {
+        $(this).toggleClass('open');
+    });
+});
+// Nav form All category dropdown
 $(document).on("click", ".form-ddn-placeholder", function () {
 
     $(this).next('ul').toggleClass("active_list");
 });
+// ends
+// Nav brouse by category  dropdown
 $(document).on("click", ".brouse-by-category", function () {
 
     $(".nav-main-dropdowns").toggleClass("active_dropdown");
@@ -69,7 +75,7 @@ $('#banner-carousel').owlCarousel({
     autoplay: true,
     dots: true,
     autoplayTimeout: 8000,
-    smartSpeed: 2500,
+    smartSpeed: 1000,
     responsive: {
         0: {
             items: 1
@@ -89,7 +95,7 @@ $('#category-carousel').owlCarousel({
     autoplay: true,
     dots: false,
     autoplayTimeout: 6500,
-    smartSpeed: 2500,
+    smartSpeed: 1000,
     navText: ['<svg xmlns="http://www.w3.org/2000/svg" width="20" height="36" viewBox="0 0 20 36" fill="none"><path d="M18.25 34.5L1.75 18L18.25 1.5" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg> ', ' <svg xmlns="http://www.w3.org/2000/svg" width="20" height="36" viewBox="0 0 20 36" fill="none"><path d="M1.75 34.5L18.25 18L1.75 1.5" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg> '],
     responsive: {
         0: {
@@ -162,13 +168,14 @@ $('.product-category-tabs-carousel').owlCarousel({
     autoplay: false,
     dots: false,
     autoplayTimeout: 2000,
-    smartSpeed: 2500,
+    smartSpeed: 1000,
     // autoWidth: true,
     // navText: ['<svg xmlns="http://www.w3.org/2000/svg" width="20" height="36" viewBox="0 0 20 36" fill="none"><path d="M18.25 34.5L1.75 18L18.25 1.5" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg> ', ' <svg xmlns="http://www.w3.org/2000/svg" width="20" height="36" viewBox="0 0 20 36" fill="none"><path d="M1.75 34.5L18.25 18L1.75 1.5" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg> '],
     responsive: {
         0: {
             items: 1,
-            margin: 20
+            margin: 20,
+            nav: false
         },
         600: {
             items: 2,

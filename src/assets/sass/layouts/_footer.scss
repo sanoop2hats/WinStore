@@ -33,7 +33,7 @@ footer {
             justify-content: space-between;
 
             @include mobile-lg() {
-                row-gap: 30px;
+                row-gap: 20px;
                 flex-wrap: wrap;
             }
 
@@ -45,7 +45,7 @@ footer {
 
                 @include mobile-md() {
                     width: 100%;
-                    text-align: center !important;
+                    text-align: left !important;
                 }
 
                 img {
@@ -114,6 +114,10 @@ footer {
 
                     &:first-child {
                         margin-bottom: 25px;
+
+                        @include mobile-lg() {
+                            margin-bottom: 15px;
+                        }
                     }
 
                     a {

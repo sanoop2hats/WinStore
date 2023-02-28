@@ -1,7 +1,7 @@
 // category carousel sec 
 .category-carousel-sec {
     background: linear-gradient(180deg, #F3EDC9 0%, #F5F5F5 80%);
-    padding-bottom: 30px;
+    padding-bottom: 35px;
 
     img {
         width: 100%;
@@ -13,6 +13,7 @@
             border: 3px solid $white-color;
             margin-left: 7px;
             position: relative;
+            transition: 0.3s;
 
             .category-name-band {
                 background: rgba(254, 249, 249, 0.95);
@@ -25,6 +26,7 @@
                 padding: 8px 15px;
                 align-items: center;
                 justify-content: space-between;
+                transition: 0.5s;
 
                 h4 {
                     margin-bottom: 0px;
@@ -56,7 +58,7 @@
             }
 
             &:hover {
-                border: 4px solid $primary-color;
+                border: 3px solid $primary-color;
 
                 .category-name-band {
                     background-color: $primary-color;
@@ -116,7 +118,7 @@
 
 .deal-of-the-day-sec {
     padding-top: 0px;
-    padding-bottom: 40px;
+    padding-bottom: 30px;
     background: #F5F5F5;
 
     @include mobile-lg() {
@@ -133,7 +135,7 @@
 
     .bdr-sep {
         border-top: 1px solid rgba(0, 0, 0, 0.17);
-        padding-top: 30px;
+        padding-top: 40px;
     }
 
     .deal-of-the-day {
@@ -184,12 +186,21 @@
         .item {
             padding: 10px;
 
+            @include mobile-lg() {
+                padding: 5px;
+            }
+
             .deal-box {
                 background: $white-color;
                 box-shadow: 0px 1px 15px rgba(0, 0, 0, 0.2);
                 border-radius: 6px;
                 overflow: hidden;
                 border: 3px solid transparent;
+                transition: 0.3s;
+
+                @include mobile-lg() {
+                    box-shadow: 0px 2px 5px rgb(0 0 0 / 20%);
+                }
 
                 &:hover {
                     border: 3px solid $light-blue;
@@ -318,8 +329,8 @@
 // New Arivals sec
 
 .new-arrivals-sec {
-    padding-bottom: 40px;
-    padding-top: 40px;
+    padding-bottom: 45px;
+    padding-top: 35px;
 
     img {
         width: 100%;
@@ -567,7 +578,7 @@
 
 // Best deal sec
 .best-deal-sec {
-    padding-top: 0px;
+    padding-top: 10px;
     padding-bottom: 40px;
     background-color: #F5F5F5;
 
@@ -611,7 +622,7 @@
             }
 
             @include mobile-lg() {
-                width: 90%;
+                width: 100%;
             }
         }
 
@@ -623,18 +634,18 @@
             display: none;
 
             @include mobile-lg() {
-                display: block;
+                // display: block;
             }
 
             @include tablet-lg() {
-                display: block;
+                // display: block;
                 position: absolute;
                 right: -70px;
                 top: -15px;
             }
 
             @include tablet-md() {
-                display: block;
+                // display: block;
                 position: absolute;
                 right: -70px;
                 top: -15px;
@@ -1250,7 +1261,7 @@
 // New arrival bottom
 .new-arrival-bottom-sec {
     background-color: #F5F5F5;
-    padding-top: 40px;
+    padding-top: 30px;
     padding-bottom: 0px;
 
     img {
@@ -1271,11 +1282,16 @@
             font-size: 35px;
             line-height: 30px;
         }
+
+        @include mobile-lg() {
+            font-size: 27px;
+            line-height: 30px;
+        }
     }
 
     .new-arrival-bottom-bg {
         background: linear-gradient(90deg, #525252 0%, #3D72B4 100%);
-        padding: 30px 0px;
+        padding: 40px 0px;
         margin-top: 30px;
 
         .new-arrival-offer-block {
@@ -1412,7 +1428,7 @@
 // Ends
 
 .last-tab-sec {
-    padding-top: 40px;
+    padding-top: 30px;
     padding-bottom: 40px;
 
     .nav-tabs {
@@ -1498,7 +1514,7 @@
             .tab-pane {
                 display: block !important;
                 opacity: 1;
-                padding-bottom: 60px;
+                padding-bottom: 40px;
 
                 &:last-child {
                     padding-bottom: 0px;
@@ -1534,6 +1550,11 @@
                             transform-origin: right top;
                             z-index: 1;
                             transform: scale(1, 1);
+                        }
+
+                        @include mobile-lg() {
+                            font-size: 25px;
+                            // line-height: 30px;
                         }
                     }
                 }

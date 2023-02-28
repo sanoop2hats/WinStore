@@ -27,23 +27,27 @@
 
             @include mobile-lg() {
                 height: 280px;
-                background-position-x: -420px !important;
+                background-position-x: -907px !important;
                 padding-top: 20px;
+                background-position-y: -160px !important;
             }
 
             &.item-01 {
                 background: url(../../assets/img/banner.webp) no-repeat right center;
                 background-size: cover;
+                object-fit: cover
             }
 
             &.item-02 {
                 background: url(../../assets/img/banner.webp) no-repeat right center;
                 background-size: cover;
+                object-fit: cover
             }
 
             &.item-03 {
                 background: url(../../assets/img/banner.webp) no-repeat right center;
                 background-size: cover;
+                object-fit: cover
             }
 
             .banner-content {
@@ -92,8 +96,8 @@
                     }
 
                     @include mobile-lg() {
-                        font-size: 18px;
-                        line-height: 22px;
+                        font-size: 27px;
+                        line-height: 33px;
                         margin-bottom: 5px;
                     }
 
