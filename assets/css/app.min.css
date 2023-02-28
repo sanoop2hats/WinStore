@@ -1833,7 +1833,7 @@ blockquote {
   overflow: hidden;
 }
 .signin-form-box .form-img-bg {
-  background: url(/assets/img/signin-bg.jpg) no-repeat left center;
+  background: url(../../assets/img/signin-bg.webp) no-repeat left center;
   background-size: cover;
   text-align: center;
   padding-top: 30px;
@@ -2217,15 +2217,15 @@ section.icon-section {
   }
 }
 .banner-slider-sec .banner-carousel .item.item-01 {
-  background: url(../../assets/img/banner.jpg) no-repeat right center;
+  background: url(../../assets/img/banner.webp) no-repeat right center;
   background-size: cover;
 }
 .banner-slider-sec .banner-carousel .item.item-02 {
-  background: url(../../assets/img/banner.jpg) no-repeat right center;
+  background: url(../../assets/img/banner.webp) no-repeat right center;
   background-size: cover;
 }
 .banner-slider-sec .banner-carousel .item.item-03 {
-  background: url(../../assets/img/banner.jpg) no-repeat right center;
+  background: url(../../assets/img/banner.webp) no-repeat right center;
   background-size: cover;
 }
 .banner-slider-sec .banner-carousel .item .banner-content {
@@ -2549,6 +2549,11 @@ section.icon-section {
 @media (max-width: 101.25rem) {
   .deal-of-the-day-sec .deal-of-the-day-carousel .owl-nav .owl-prev {
     left: -62%;
+  }
+}
+@media only screen and (min-width: 1200px) and (max-width: 1400px) {
+  .deal-of-the-day-sec .deal-of-the-day-carousel .owl-nav .owl-prev {
+    left: -59%;
   }
 }
 .deal-of-the-day-sec .deal-of-the-day-carousel .owl-nav .owl-next {
@@ -3340,6 +3345,11 @@ section.icon-section {
 @media (max-width: 47.9375rem) {
   .win-mart-sec .win-mart-box .save-band {
     display: none;
+  }
+}
+@media only screen and (min-width: 1200px) and (max-width: 1400px) {
+  .win-mart-sec .win-mart-box .save-band {
+    left: -52px;
   }
 }
 .win-mart-sec .win-mart-box .win-mart-item-block {
