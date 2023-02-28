@@ -1959,8 +1959,8 @@ footer .footer-bg .container {
 }
 @media (max-width: 47.9375rem) {
   footer .footer-bg .container {
-    padding-left: 20px;
-    padding-right: 20px;
+    padding-left: 0px;
+    padding-right: 0px;
   }
 }
 footer .footer-sec {
@@ -1974,6 +1974,11 @@ footer .footer-sec {
 @media (max-width: 61.9375rem) {
   footer .footer-sec {
     padding: 30px 15px;
+  }
+}
+@media (max-width: 47.9375rem) {
+  footer .footer-sec {
+    padding: 30px 10px;
   }
 }
 footer .footer-sec .footer-links-sec {
@@ -2212,15 +2217,15 @@ section.icon-section {
   }
 }
 .banner-slider-sec .banner-carousel .item.item-01 {
-  background: url(/assets/img/banner.jpg) no-repeat right center;
+  background: url(../../assets/img/banner.jpg) no-repeat right center;
   background-size: cover;
 }
 .banner-slider-sec .banner-carousel .item.item-02 {
-  background: url(/assets/img/banner.jpg) no-repeat right center;
+  background: url(../../assets/img/banner.jpg) no-repeat right center;
   background-size: cover;
 }
 .banner-slider-sec .banner-carousel .item.item-03 {
-  background: url(/assets/img/banner.jpg) no-repeat right center;
+  background: url(../../assets/img/banner.jpg) no-repeat right center;
   background-size: cover;
 }
 .banner-slider-sec .banner-carousel .item .banner-content {
@@ -3681,6 +3686,9 @@ section.icon-section {
     display: block !important;
     opacity: 1;
     padding-bottom: 60px;
+  }
+  .last-tab-sec .tab-content .tab-pane:last-child {
+    padding-bottom: 0px;
   }
   .last-tab-sec .tab-content .tab-pane .heading-on-mobile {
     display: block;
