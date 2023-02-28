@@ -19,11 +19,12 @@
         <div class="container">
           <div class="main-nav">
             <div class="hamburger-menu-mob">
-              <span class="navbar-toggler-icon">
-                <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30">
-                  <path stroke="rgba(0, 0, 0, 0.5)" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2" d="M4 7h22M4 15h22M4 23h22" style="stroke: #fff;" />
-                </svg>
-              </span>
+              <div id="hamburger-menu-icon">
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+              </div>
             </div>
             <div class="nav-logo">
               <img src="assets/img/winstore-logo.svg" alt="Win Store Logo" loading="lazy" width="170" height="48">
@@ -46,9 +47,9 @@
                 </div>
                 <div class="form-group">
                   <input type="text" class="form-control" placeholder="Search for products">
-                  <span class="search-icon">
+                  <button type="button" aria-label="Search" role="Search" class="search-icon">
                     <img src="assets/img/search.webp" alt="Search icon" loading="lazy" width="24" height="24">
-                  </span>
+                  </button>
                 </div>
               </form>
             </div>
@@ -735,7 +736,7 @@
         <ul id="menu">
           <li>
             <a href="javascript://" class="brouse_by_category">Brouse By Category <span>
-                <img src="/assets/img/down-arrow.webp" alt="Down arrow" loading="lazy" width="14" height="8">
+                <img src="assets/img/down-arrow.webp" alt="Down arrow" loading="lazy" width="14" height="8">
               </span>
             </a>
             <ul class="nav-dropdown-set1">
@@ -788,7 +789,7 @@
     </header>
     <section id="slider" class="banner-slider-sec">
       <div class="owl-carousel owl-theme banner-carousel" id="banner-carousel">
-        <div class="item item-01">
+        <div class="item item-01" style="background: url(../../assets/img/banner.webp) no-repeat right center;">
           <div class="container">
             <div class="banner-content">
               <h2 class="banner-title">Shop <span>Computer & experience</span>
@@ -800,7 +801,7 @@
             </div>
           </div>
         </div>
-        <div class="item item-02">
+        <div class="item item-02" style="background: url(../../assets/img/banner.webp) no-repeat right center;">
           <div class="container">
             <div class="banner-content">
               <h2 class="banner-title">Shop <span>Computer & experience</span>
@@ -812,7 +813,7 @@
             </div>
           </div>
         </div>
-        <div class="item item-03">
+        <div class="item item-03" style="background: url(../../assets/img/banner.webp) no-repeat right center;">
           <div class="container">
             <div class="banner-content">
               <h2 class="banner-title">Shop <span>Computer & experience</span>
