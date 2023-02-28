@@ -267,6 +267,10 @@
                 @include desktop-md() {
                     left: -62%;
                 }
+
+                @media only screen and (min-width: 1200px) and (max-width: 1400px) {
+                    left: -59%;
+                }
             }
 
 
@@ -306,6 +310,8 @@
         }
     }
 }
+
+
 
 // deal of the day sec ends
 
@@ -1116,6 +1122,10 @@
 
             @include mobile-lg() {
                 display: none;
+            }
+
+            @media only screen and (min-width: 1200px) and (max-width: 1400px) {
+                left: -52px;
             }
         }
 
