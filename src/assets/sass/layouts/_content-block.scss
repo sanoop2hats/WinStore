@@ -1490,6 +1490,10 @@
                 opacity: 1;
                 padding-bottom: 60px;
 
+                &:last-child {
+                    padding-bottom: 0px;
+                }
+
                 .heading-on-mobile {
                     display: block;
 
