@@ -21,5 +21,6 @@ Shope Computer & experience
 - npm install - install the package dependencies
 - npm run dev - to start the development URL (wordpress.local:5001) with live reload
 - npm run prod - This will bundle all assets into the ‘dist’ folder.
+- npm run gh-deploy - This will deploy the dist folder to gh-pages branch
 
 Good luck!
