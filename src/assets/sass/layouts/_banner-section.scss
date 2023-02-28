@@ -26,8 +26,8 @@
             }
 
             @include mobile-lg() {
-                height: 170px;
-                background-position-x: -170px !important;
+                height: 280px;
+                background-position-x: -420px !important;
                 padding-top: 20px;
             }
 
@@ -52,13 +52,6 @@
                 padding-top: 30px;
 
 
-
-                @include tablet-md() {
-                    padding-top: 0px;
-                    padding-left: 10px;
-                    width: 50%;
-                }
-
                 @include tablet-lg() {
                     padding-top: 0px;
                     padding-left: 10px;
@@ -66,8 +59,17 @@
                     padding-left: 0px;
                 }
 
+                @include tablet-md() {
+                    padding-top: 0px;
+                    padding-left: 0px;
+                    width: 50%;
+                }
+
+
+
                 @include mobile-lg() {
-                    width: 60%;
+                    width: 65%;
+                    padding-top: 20px;
                 }
 
                 .banner-title {

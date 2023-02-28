@@ -5,12 +5,22 @@
          display: none;
      }
 
+
+
      .navbar-collapse {
          justify-content: space-between;
+
+         @include tablet-md() {
+             display: flex;
+         }
      }
 
      .navbar-nav {
          align-items: center;
+
+         @include tablet-md() {
+             flex-direction: row;
+         }
      }
 
      .navbar-nav li a {
@@ -18,8 +28,17 @@
          color: $white-color;
          padding: 5px 35px !important;
 
+         &:hover {
+             color: $off-blue;
+         }
+
          @include tablet-lg() {
              padding: 5px 17px !important;
+         }
+
+         @include tablet-md() {
+             padding: 5px 10px !important;
+             font-size: 12px;
          }
      }
 
@@ -46,12 +65,21 @@
          &:hover {
              color: $off-blue;
          }
+
+         @include tablet-md() {
+             padding: 5px 5px !important;
+         }
      }
 
      .navbar-nav.right-sm-item li a.linkedin {
          padding: 5px 0px 5px 15px !important;
      }
 
+     @include tablet-md() {
+         .navbar-toggler {
+             display: none;
+         }
+     }
  }
 
  //  nav dropdown css
@@ -89,6 +117,10 @@
          gap: 5px;
          padding: 15px 0px;
 
+         @include mobile-lg() {
+             flex-direction: column;
+         }
+
          .nav-main-dropdowns--item {
              width: 77%;
              position: relative;
@@ -104,6 +136,11 @@
          justify-content: space-between;
          padding-bottom: 20px;
 
+         @include tablet-md() {
+             flex-wrap: wrap;
+             justify-content: center;
+         }
+
          li {
              font-size: 13px;
              line-height: 53px;
@@ -118,6 +155,10 @@
                  @include tablet-lg() {
                      font-size: 11px;
                      padding: 7px 5px;
+                 }
+
+                 @include tablet-md() {
+                     padding: 7px 20px;
                  }
 
                  &:hover {
@@ -172,9 +213,7 @@
                  }
 
                  &:hover {
-                     //  background-color: $white-color;
-                     color: $white-color;
-
+                     color: $off-blue;
                  }
              }
 
@@ -190,6 +229,10 @@
          border-left: 1px solid #0E3B3E;
          position: relative;
 
+         @include tablet-md() {
+             padding-left: 20px;
+         }
+
          h4 {
              color: $off-blue;
              font-size: 16px;
@@ -201,6 +244,10 @@
              color: $white-color;
              font-size: 12px;
              color: $white-color;
+
+             &:hover {
+                 color: $off-blue;
+             }
          }
 
          p {
@@ -226,6 +273,10 @@
      transition: 0.3s;
      display: none;
 
+     @include tablet-md() {
+         top: 30%;
+     }
+
      @include mobile-lg() {
          transition: 0s;
      }
@@ -246,6 +297,15 @@
 
              &.fashiom-dropdown {
                  top: 120px;
+
+                 .dropdown-category-sec {
+
+                     padding: 20px 20px 30px;
+                 }
+             }
+
+             &.home-appliances-dropdown {
+                 top: 155px;
              }
          }
      }
@@ -259,9 +319,17 @@
              fill: $black-color
          }
 
+         @include tablet-md() {
+             position: absolute;
+             right: -28%;
+             top: 8px;
+         }
+
          @include mobile-lg() {
              top: -30px;
+             right: 15px;
          }
+
      }
 
      .dropdown-category-sec {
@@ -278,9 +346,17 @@
              padding: 20px 30px;
          }
 
+         @include tablet-md() {
+             max-width: 130%;
+             padding: 35px 30px;
+             width: 130%;
+         }
+
          @include mobile-lg() {
              flex-wrap: wrap;
              row-gap: 20px;
+             width: 100%;
+             max-width: 100%;
 
              .dropdown-category {
                  width: 50%;
