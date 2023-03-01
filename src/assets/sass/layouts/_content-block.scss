@@ -534,7 +534,7 @@
         }
     }
 
-    @include tablet-md() {
+    @include mobile-md() {
         .product-category-tabs {
             width: 95%;
         }
