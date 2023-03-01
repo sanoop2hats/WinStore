@@ -420,11 +420,27 @@
         .scroll_tabs_container .scroll_tab_left_button {
             position: absolute;
             right: -20px;
+
+            @include tablet-md() {
+                top: -10px;
+            }
+
+            @include mobile-lg() {
+                top: -10px;
+            }
         }
 
         .scroll_tabs_container .scroll_tab_right_button {
             position: absolute;
             right: -45px;
+
+            @include tablet-md() {
+                top: -10px;
+            }
+
+            @include mobile-lg() {
+                top: -10px;
+            }
         }
 
         .scroll_tabs_container .scroll_tab_left_button::before {
@@ -481,7 +497,7 @@
                         content: "";
                         display: block;
                         position: absolute;
-                        bottom: 0px;
+                        bottom: 3px;
                         left: 0px;
                         right: 0px;
                         height: 3px;
