@@ -48,7 +48,7 @@
                 <div class="form-group">
                   <input type="text" class="form-control" placeholder="Search for products">
                   <button type="button" aria-label="Search" role="Search" class="search-icon">
-                    <img src="assets/img/search.webp" alt="Search icon" loading="lazy" width="24" height="24">
+                    <i class="icon-search"></i>
                   </button>
                 </div>
               </form>
@@ -56,23 +56,26 @@
             <div class="order-details">
               <p>
                 <a href="#">
-                  <span>
-                    <img src="assets/img/order-tracking.svg" alt="Orders & Tracking" loading="lazy" width="25" height="15">
-                  </span>Orders & Tracking
+                  <span class="icon-set">
+                    <i class="icon-tracking"></i>
+                  </span>
+                  <span class="icon-text">Orders & Tracking</span>
                 </a>
               </p>
               <p>
                 <a href="#">
-                  <span>
+                  <span class="icon-set">
                     <img src="assets/img/flag.svg" alt="Flag icon" loading="lazy" width="25" height="17">
-                  </span>Delivery within Pakistan
+                  </span>
+                  <span class="icon-text">Delivery within Pakistan</span>
                 </a>
               </p>
               <p>
                 <a href="javascript://">
-                  <span class="small-icon">
-                    <img src="assets/img/return.svg" alt="Return icon" width="25" height="17">
-                  </span>Return
+                  <span class="icon-set small-icon">
+                    <i class="icon-return"></i>
+                  </span>
+                  <span class="icon-text">Return</span>
                 </a>
               </p>
             </div>
@@ -80,29 +83,32 @@
               <p>Call Us Now</p>
               <p>
                 <a href="tel:+011 5827918">
-                  <span>
-                    <img src="assets/img/headphone.svg" alt="Call icon" loading="lazy" width="19" height="17">+011 5827918
+                  <span class="icon-set">
+                    <i class="icon-support"></i>
                   </span>
+                  <span class="icon-text">+011 5827918</span>
                 </a>
               </p>
               <p>
-                <a href="javascript://" class="signin-icon">Sign In</a>
+                <a href="javascript://" class="signin-icon">
+                  <span class="icon-text">Sign In</span>
+                </a>
               </p>
             </div>
             <div class="user-like-cart">
               <div>
                 <a href="javascript://" class="user-icon">
-                  <img src="assets/img/user.svg" alt="User icon" loading="lazy" width="24" height="24">
+                  <i class="icon-user"></i>
                 </a>
               </div>
               <div>
                 <a href="#">
-                  <img src="assets/img/heart.svg" alt="Like Icon" loading="lazy" width="24" height="22">
+                  <i class="icon-wish-list"></i>
                 </a>
               </div>
               <div>
                 <a href="Javascript://" class="cart-icon">
-                  <img src="assets/img/shopping-cart.svg" alt="Shoping cart Icon" loading="lazy" width="24" height="25">
+                  <i class="icon-cart"></i>
                   <span class="cart-count">3</span>
                   <span class="cart-text">Cart</span>
                 </a>
@@ -348,22 +354,22 @@
             <ul class="navbar-nav mr-auto right-sm-item">
               <li class="nav-item">
                 <a class="nav-link" href="#" aria-label="Nav links" target="_blank">
-                  <i class="fa fa-facebook" aria-hidden="true"></i>
+                  <i class="icon-fb" aria-hidden="true"></i>
                 </a>
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="#" aria-label="Nav links" target="_blank">
-                  <i class="fa fa-twitter" aria-hidden="true"></i>
+                  <i class="icon-twitter" aria-hidden="true"></i>
                 </a>
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="#" aria-label="Nav links" target="_blank">
-                  <i class="fa fa-instagram" aria-hidden="true"></i>
+                  <i class="icon-instagram" aria-hidden="true"></i>
                 </a>
               </li>
               <li class="nav-item">
                 <a class="nav-link linkedin" href="#" aria-label="Nav links" target="_blank">
-                  <i class="fa fa-linkedin" aria-hidden="true"></i>
+                  <i class="icon-linkedin" aria-hidden="true"></i>
                 </a>
               </li>
             </ul>
@@ -1193,24 +1199,31 @@
           <div class="col-12 our-products-sec-header">
             <h3 class="sub-sec-title">Our <span>Products</span>
             </h3>
-            <div class="product-category-tabs">
-              <div class="owl-carousel owl-theme product-category-tabs-carousel" id="product-category-tabs-carousel">
-                <div class="item">
-                  <p>
-                    <a href="javascript://" class="active" data-url="#easy-installment">Easy Monthly Installmentsd</a>
-                  </p>
-                </div>
-                <div class="item">
-                  <p>
-                    <a href="javascript://" data-url="#on-sale">On Sale</a>
-                  </p>
-                </div>
-                <div class="item">
-                  <p>
-                    <a href="javascript://" data-url="#top-rated">Top Rated</a>
-                  </p>
-                </div>
-              </div>
+            <div class="product-category-tabs"><!-- <div class="owl-carousel owl-theme product-category-tabs-carousel"
+                                id="product-category-tabs-carousel">
+                        <div class="item ">
+                            <p><a href="javascript://" class="active" data-url="#easy-installment">Easy Monthly
+                                    Installmentsd</a>
+                            </p>
+                        </div>
+                        <div class="item ">
+                            <p><a href="javascript://" data-url="#on-sale">On Sale</a></p>
+                        </div>
+                        <div class="item ">
+                            <p><a href="javascript://" data-url="#top-rated">Top Rated</a></p>
+                        </div>
+                    </div> -->
+              <ul class="nav nav-tabs scroll_tabs_theme_light" id="productsstab" role="tablist">
+                <li class="nav-item">
+                  <a class="nav-link active" id="installment-tab" data-toggle="tab" href="#easy-installment" role="tab" aria-controls="easy-installment-tab" aria-selected="true">Easy Monthly Installmentsd</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" id="sale-tab" data-toggle="tab" href="#on-sale" role="tab" aria-controls="on-sale" aria-selected="true">On Sale</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" id="top-rated-tab" data-toggle="tab" href="#top-rated" role="tab" aria-controls="top-rated" aria-selected="true">Top Rated</a>
+                </li>
+              </ul>
             </div>
           </div>
           <div class="our-products-block">
@@ -1478,34 +1491,43 @@
           <div class="col-12 best-deal-sec-header">
             <h3 class="sub-sec-title">Best <span>Deals</span>
             </h3>
-            <div class="product-category-tabs">
-              <div class="owl-carousel owl-theme product-category-tabs-carousel" id="product-category-tabs-carousel">
-                <div class="item">
-                  <p>
-                    <a href="javascript://" class="active" data-url="#kitchen-appliances-tab">Kitchen Appliances</a>
-                  </p>
-                </div>
-                <div class="item">
-                  <p>
-                    <a href="javascript://" data-url="#consoles-tab">Consoles</a>
-                  </p>
-                </div>
-                <div class="item">
-                  <p>
-                    <a href="javascript://" data-url="#tv-video-tab">TV & Videos</a>
-                  </p>
-                </div>
-                <div class="item">
-                  <p>
-                    <a href="javascript://" data-url="#cell-phone-tab">Cell Phones</a>
-                  </p>
-                </div>
-                <div class="item">
-                  <p>
-                    <a href="javascript://" data-url="#grocery-tab">Grocery</a>
-                  </p>
-                </div>
-              </div>
+            <div class="product-category-tabs"><!-- <div class="owl-carousel owl-theme product-category-tabs-carousel"
+                                id="best-deal-tabs-carousel">
+                        <div class="item ">
+                            <p><a href="javascript://" class="active" data-url="#kitchen-appliances-tab">Kitchen
+                                    Appliances</a>
+                            </p>
+                        </div>
+                        <div class="item ">
+                            <p><a href="javascript://" data-url="#consoles-tab">Consoles </a></p>
+                        </div>
+                        <div class="item ">
+                            <p><a href="javascript://" data-url="#tv-video-tab">TV & Videos</a></p>
+                        </div>
+                        <div class="item ">
+                            <p><a href="javascript://" data-url="#cell-phone-tab">Cell Phones</a></p>
+                        </div>
+                        <div class="item ">
+                            <p><a href="javascript://" data-url="#grocery-tab">Grocery</a></p>
+                        </div>
+                    </div> -->
+              <ul class="nav nav-tabs scroll_tabs_theme_light" id="dealstab" role="tablist">
+                <li class="nav-item">
+                  <a class="nav-link active" id="home-tab" data-toggle="tab" href="#kitchen-appliances-tab" role="tab" aria-controls="kitchen-appliances-tab" aria-selected="true">Kitchen&nbsp;Appliances</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" id="home-tab" data-toggle="tab" href="#consoles-tab" role="tab" aria-controls="consoles-tab" aria-selected="true">Consoles</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" id="home-tab" data-toggle="tab" href="#tv-video-tab" role="tab" aria-controls="tv-video-tab" aria-selected="true">TV&nbsp;&&nbsp;Videos</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" id="home-tab" data-toggle="tab" href="#cellphone-tab" role="tab" aria-controls="cellphone-tab" aria-selected="true">Cell&nbsp;Phones</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" id="home-tab" data-toggle="tab" href="#grocery-tab" role="tab" aria-controls="grocery-tab" aria-selected="true">Grocery</a>
+                </li>
+              </ul><!-- <p class="left-arrow-scroll" style="margin-top: 44px;">asdlj</p> -->
             </div>
           </div>
           <div class="deal-category-content" id="kitchen-appliances-tab">
@@ -2425,22 +2447,22 @@
               <p class="footer-sm">
                 <span>
                   <a class="footer-sm-link" href="#" target="_blank" aria-label="Footer links">
-                    <i class="fa fa-facebook" aria-hidden="true"></i>
+                    <i class="icon-fb" aria-hidden="true"></i>
                   </a>
                 </span>
                 <span>
                   <a class="footer-sm-link" href="#" target="_blank" aria-label="Footer links">
-                    <i class="fa fa-twitter" aria-hidden="true"></i>
+                    <i class="icon-twitter" aria-hidden="true"></i>
                   </a>
                 </span>
                 <span>
                   <a class="footer-sm-link" href="#" target="_blank" aria-label="Footer links">
-                    <i class="fa fa-instagram" aria-hidden="true"></i>
+                    <i class="icon-instagram" aria-hidden="true"></i>
                   </a>
                 </span>
                 <span>
                   <a class="footer-sm-link" href="#" target="_blank" aria-label="Footer links">
-                    <i class="fa fa-linkedin" aria-hidden="true"></i>
+                    <i class="icon-linkedin" aria-hidden="true"></i>
                   </a>
                 </span>
               </p>
