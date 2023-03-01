@@ -14,36 +14,38 @@ $(document).on("click", ".brouse-by-category", function () {
 
     $(".nav-main-dropdowns").toggleClass("active_dropdown");
 });
-
+// Nav brouse by category  dropdown close
 $(document).on("click", ".nav-main-dropdowns--help p a", function () {
 
     $(".nav-main-dropdowns").removeClass("active_dropdown");
 });
-
+// Nav prodile dropdown
 $(document).on("click", ".user-icon", function () {
 
     $(".profile-box").toggleClass("active-profile-box");
 });
-
+// Nav prodile dropdown close
 $(document).on("click", ".profile-close a", function () {
 
     $(".profile-box").removeClass("active-profile-box");
 });
-
+// Nav Cart dropdown
 $(document).on("click", ".cart-icon", function () {
 
     $(".cartList-box").toggleClass("active-cartlist-box");
 });
-
+// Nav Cart dropdown close
 $(document).on("click", ".cart-close a", function () {
 
     $(".cartList-box").removeClass("active-cartlist-box");
 });
+// Nav Sign in dropdown
+// $(document).on("click", ".signin-icon", function () {
 
-$(document).on("click", ".signin-icon", function () {
+//     $(".signin-form-box").toggleClass("active-signin-box");
+// });
 
-    $(".signin-form-box").toggleClass("active-signin-box");
-});
+// Sub dropdown open
 $(document).on("click", ".main-dropdown-ul li a", function () {
     var url = $(this).data("url");
     if ($(this).hasClass("active")) {
@@ -63,11 +65,13 @@ $(document).on("click", ".main-dropdown-ul li a", function () {
         $(url).addClass("active_sub_tab");
     }
 });
+// Sub dropdown close
 $(document).on("click", ".sub-item-dropdown .close-btn", function () {
     $(".main-dropdown-ul li a").removeClass("active")
     $(".sub-item-dropdown").removeClass("active_sub_tab");
 });
 
+// Banner carousel
 $('#banner-carousel').owlCarousel({
     loop: true,
     margin: 0,
@@ -88,6 +92,8 @@ $('#banner-carousel').owlCarousel({
         }
     }
 });
+
+// Category carousel
 $('#category-carousel').owlCarousel({
     loop: true,
     margin: 20,
@@ -122,6 +128,7 @@ $('#category-carousel').owlCarousel({
     }
 });
 
+// Deal of the day carousel
 $('#deal-of-the-day-carousel').owlCarousel({
     loop: true,
     margin: 20,
@@ -161,6 +168,8 @@ $('#deal-of-the-day-carousel').owlCarousel({
         }
     }
 })
+
+// Product filter carousel
 $('.product-category-tabs-carousel').owlCarousel({
     loop: false,
     margin: 30,
@@ -190,8 +199,38 @@ $('.product-category-tabs-carousel').owlCarousel({
     }
 })
 
+// Product filter carousel
+$('#best-deal-tabs-carousels').owlCarousel({
+    loop: false,
+    margin: 30,
+    nav: true,
+    autoplay: false,
+    dots: false,
+    autoplayTimeout: 2000,
+    smartSpeed: 1000,
+    // autoWidth: true,
+    // navText: ['<svg xmlns="http://www.w3.org/2000/svg" width="20" height="36" viewBox="0 0 20 36" fill="none"><path d="M18.25 34.5L1.75 18L18.25 1.5" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg> ', ' <svg xmlns="http://www.w3.org/2000/svg" width="20" height="36" viewBox="0 0 20 36" fill="none"><path d="M1.75 34.5L18.25 18L1.75 1.5" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg> '],
+    responsive: {
+        0: {
+            items: 1,
+            margin: 20,
+            nav: false
+        },
+        600: {
+            items: 2,
+            margin: 20
+        },
+        1000: {
+            items: 3
+        },
+        1200: {
+            items: 3
+        }
+    }
+})
+// New arrival countdown
 $(document).ready(function () {
-    // New arrival countdown
+
     function makeTimer() {
         var arrivalEnds = new Date("29 february 2023 9:56:00 GMT+01:00");
         arrivalEnds = (Date.parse(arrivalEnds) / 1000);
@@ -215,7 +254,7 @@ $(document).ready(function () {
 
     setInterval(function () { makeTimer(); }, 1000);
 });
-
+// Brouse by category  Mobile drop down
 $(document).on("click", ".brouse_by_category", function () {
 
     $(".nav-dropdown-set1").toggleClass("active");
@@ -242,5 +281,14 @@ $('.owl-carousel').each(function () {
     });
     $(this).find('.owl-nav button').each(function (index) {
         $(this).attr('aria-label', index + 1);
+    });
+});
+
+$(document).ready(function () {
+    var dealstab = null;
+    var productsstab = null;
+    $(document).ready(function () {
+        $('#dealstab').scrollTabs();
+        $('#productsstab').scrollTabs();
     });
 });

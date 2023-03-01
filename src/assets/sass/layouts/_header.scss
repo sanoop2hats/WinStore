@@ -267,7 +267,7 @@
             font-size: 10px;
         }
 
-        span {
+        span.icon-set {
             width: 25px;
 
             img {
@@ -276,7 +276,11 @@
         }
 
         &:hover {
-            text-decoration: underline;
+            text-decoration: none;
+
+            .icon-text {
+                text-decoration: underline;
+            }
         }
 
         .small-icon img {
@@ -316,7 +320,11 @@
         }
 
         &:hover {
-            text-decoration: underline;
+            text-decoration: none;
+
+            .icon-text {
+                text-decoration: underline;
+            }
         }
     }
 
@@ -333,7 +341,7 @@
         }
 
         @include tablet-md() {
-            width: 16%;
+            width: 18%;
             // gap: 15px;
         }
 
@@ -361,7 +369,7 @@
             line-height: 18px;
             position: absolute;
             left: 20%;
-            top: -14px;
+            top: -20px;
         }
 
         .cart-text {
