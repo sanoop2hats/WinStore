@@ -48,6 +48,7 @@
                     font-family: $font-regular;
                     color: $black-color;
                     font-size: 19px;
+                    line-height: 26px;
 
                     @include tablet-lg() {
                         font-size: 13px;
@@ -62,6 +63,8 @@
 
                     @include tablet-lg() {
                         font-size: 13px;
+                        line-height: 20px;
+
                     }
                 }
 
@@ -94,6 +97,10 @@
                 &:hover {
                     background: none;
                 }
+
+                @include tablet-lg() {
+                    left: -15px;
+                }
             }
 
             .owl-next {
@@ -103,6 +110,10 @@
 
                 &:hover {
                     background: none;
+                }
+
+                @include tablet-lg() {
+                    right: -15px;
                 }
             }
         }
@@ -195,11 +206,19 @@
             // font-size: 12px;
             // line-height: 15px;
             color: $black-color;
+
+            @include mobile-lg() {
+                line-height: 17px;
+            }
         }
 
         .view-more {
             float: left;
             margin-top: 35px;
+
+            @include tablet-md() {
+                margin-top: 20px;
+            }
 
             @include mobile-lg() {
                 margin-top: 10px;
@@ -307,7 +326,7 @@
                 }
 
                 @include desktop-md() {
-                    left: -62%;
+                    left: -59%;
                 }
 
                 @media only screen and (min-width: 1200px) and (max-width: 1400px) {
@@ -331,6 +350,10 @@
 
                 @include desktop-md() {
                     right: -60px;
+                }
+
+                @include tablet-lg() {
+                    right: -30px;
                 }
             }
         }
@@ -377,6 +400,7 @@
             flex-direction: column;
             text-align: left;
             align-items: flex-start;
+            gap: 20px;
         }
 
 
@@ -497,6 +521,10 @@
             li {
                 width: auto;
 
+                @include tablet-md() {
+                    padding-bottom: 10px;
+                }
+
                 a {
                     font-weight: 400;
                     font-size: 19px;
@@ -509,6 +537,10 @@
                     padding: 10px 0px !important;
                     margin: 0px 15px;
                     position: relative;
+
+                    @include tablet-md() {
+                        font-size: 14px;
+                    }
 
                     @include mobile-lg() {
                         font-size: 14px;
@@ -580,6 +612,8 @@
     @include tablet-md() {
         .product-category-tabs {
             width: 65%;
+            height: 45px;
+            top: 7px;
         }
     }
 
@@ -594,13 +628,19 @@
         gap: 15px;
         padding-top: 30px;
 
+        @include tablet-lg() {
+            align-items: flex-start;
+        }
+
+        @include tablet-md() {
+            padding-top: 20px;
+        }
+
         @include mobile-lg() {
             flex-direction: column;
         }
 
-        @include tablet-lg() {
-            align-items: flex-start;
-        }
+
     }
 
     .our-products-offer-product {
@@ -765,7 +805,7 @@
         display: flex;
         align-items: center;
         justify-content: flex-start;
-        gap: 200px;
+        gap: 265px;
 
 
 
@@ -786,7 +826,7 @@
         }
 
         .product-category-tabs {
-            width: 68%;
+            width: 65%;
             // overflow: hidden;
             // margin-left: -30px;
             position: relative;
@@ -858,6 +898,10 @@
                         padding: 10px 0px !important;
                         margin: 0px 15px;
                         position: relative;
+
+                        @include tablet-md() {
+                            font-size: 14px;
+                        }
 
                         @include mobile-lg() {
                             font-size: 14px;
@@ -949,9 +993,11 @@
     .three-column-block {
         display: flex;
         gap: 15px;
+        padding-top: 30px;
 
         @include mobile-lg() {
             flex-direction: column;
+            padding-top: 15px;
         }
 
         .width-set {
@@ -962,7 +1008,7 @@
             }
         }
 
-        padding-top: 30px;
+
 
     }
 
@@ -1009,6 +1055,12 @@
 
             @include tablet-lg() {
                 font-size: 15px;
+
+            }
+
+            @include mobile-lg() {
+                line-height: 1.875rem;
+
             }
         }
 
@@ -1100,7 +1152,13 @@
                 padding-bottom: 0px;
 
                 h4 {
-                    margin-bottom: 0px;
+                    margin-bottom: 10px;
+                }
+
+                @include tablet-md() {
+                    h3 {
+                        padding-top: 3px;
+                    }
                 }
 
                 p.already-sold {
@@ -1112,6 +1170,10 @@
                     @include tablet-lg() {
                         font-size: 13px;
                         line-height: 17px;
+                    }
+
+                    @include tablet-md() {
+                        padding-top: 3px;
                     }
                 }
 
@@ -1278,14 +1340,22 @@
         &.one-column {
             position: relative;
             transition: 0.5s;
-
+            height: 570px;
 
             &:hover {
                 box-shadow: 0px 1px 13px rgb(0 0 0 / 23%);
             }
 
+            @media only screen and (min-width: 1200px) and (max-width: 1400px) {
+                img {
+                    margin-top: 25px;
+                    width: 100% !important;
+                }
+            }
+
             @include desktop-xs() {
                 height: 570px;
+
             }
 
             @include tablet-lg() {
@@ -1303,6 +1373,11 @@
 
                 img {
                     margin-bottom: 6px;
+                    width: 93%;
+
+                    @include tablet-md() {
+                        width: 100% !important;
+                    }
                 }
 
 
@@ -1335,6 +1410,11 @@
                 gap: 15px;
                 align-items: center;
                 color: $black-color;
+
+                @include tablet-md() {
+                    padding-top: 3px;
+                    padding-bottom: 3px;
+                }
 
                 h3 {
                     color: $red;
@@ -1429,6 +1509,10 @@
                 color: $white-color;
                 position: absolute;
                 width: 100px;
+            }
+
+            @include tablet-lg() {
+                left: -39px;
             }
 
             @include tablet-md() {
@@ -1666,6 +1750,11 @@
                     gap: 15px;
                     align-items: center;
 
+                    @include tablet-md() {
+                        padding-top: 3px;
+                        padding-bottom: 3px;
+                    }
+
                     h3 {
                         font-size: 22px;
                         margin: 0px;
@@ -1673,6 +1762,10 @@
 
                         @include tablet-lg() {
                             font-size: 15px;
+                        }
+
+                        @include mobile-lg() {
+                            line-height: 1.875rem;
                         }
                     }
 
@@ -1689,6 +1782,10 @@
                     align-items: center;
                     color: $black-color;
 
+                    @include tablet-md() {
+                        gap: 10px;
+                    }
+
                     p {
                         margin: 0px;
                         color: $light-blue;
@@ -1698,6 +1795,8 @@
                             font-size: 13px;
                             line-height: 17px;
                         }
+
+
                     }
 
 
@@ -1952,6 +2051,10 @@
                             @include tablet-lg() {
                                 font-size: 13px;
                                 margin-top: 0px;
+                            }
+
+                            @include mobile-lg() {
+                                line-height: 1.75rem;
                             }
                         }
                     }

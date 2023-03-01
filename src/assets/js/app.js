@@ -118,7 +118,8 @@ $('#category-carousel').owlCarousel({
     responsive: {
         0: {
             items: 1,
-            dots: true
+            dots: true,
+            nav: false
         },
         500: {
             items: 2,
@@ -135,7 +136,8 @@ $('#category-carousel').owlCarousel({
             nav: false
         },
         1000: {
-            items: 3
+            items: 4,
+            margin: 0
         },
         1240: {
             items: 4
@@ -177,7 +179,7 @@ $('#deal-of-the-day-carousel').owlCarousel({
             nav: false
         },
         1000: {
-            items: 2,
+            items: 3,
             margin: 10
         },
         1200: {
@@ -253,7 +255,7 @@ $('#best-deal-tabs-carousels').owlCarousel({
 $(document).ready(function () {
 
     function makeTimer() {
-        var arrivalEnds = new Date("29 february 2023 9:56:00 GMT+01:00");
+        var arrivalEnds = new Date("5 march 2023 9:56:00 GMT+01:00");
         arrivalEnds = (Date.parse(arrivalEnds) / 1000);
         var now = new Date();
         now = (Date.parse(now) / 1000);

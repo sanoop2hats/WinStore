@@ -2,16 +2,21 @@
      background: #0E3B3E;
 
      @include mobile-lg() {
-         display: none;
+         display: none !important;
      }
 
-
+     @include tablet-md() {
+         .container {
+             padding-left: 0px;
+             padding-right: 0px;
+         }
+     }
 
      .navbar-collapse {
          justify-content: space-between;
 
          @include tablet-md() {
-             display: flex;
+             display: flex !important;
          }
      }
 
@@ -24,7 +29,7 @@
      }
 
      .navbar-nav li a {
-         font-size: 13px;
+         font-size: 12px;
          color: $white-color;
          padding: 5px 35px !important;
 
@@ -38,7 +43,7 @@
 
          @include tablet-md() {
              padding: 5px 8px !important;
-             font-size: 12px;
+             font-size: 11px;
          }
      }
 
@@ -48,7 +53,7 @@
 
          @include tablet-lg() {
              padding: 5px 17px 5px 0px !important;
-             font-size: 15px;
+             font-size: 12px;
          }
 
          img {
@@ -390,7 +395,7 @@
                  line-height: 37px;
 
                  &:hover {
-                     text-decoration: underline;
+                     text-decoration: underline !important;
                  }
              }
          }

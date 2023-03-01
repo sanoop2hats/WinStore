@@ -1,3 +1,7 @@
+p {
+    margin-bottom: 0px !important;
+}
+
 .f-left {
     float: left;
 }
@@ -114,14 +118,14 @@
         .owl-dots {
             .owl-dot {
                 span {
-                    background: #AA9393;
+                    background: #AA9393 !important;
                     width: 36px;
                     height: 8px;
                 }
 
                 &.active {
                     span {
-                        background-color: #034E53;
+                        background-color: #034E53 !important;
                     }
                 }
             }
@@ -132,6 +136,15 @@
         .container {
             padding-left: 20px;
             padding-right: 20px;
+
+            @include tablet-lg() {
+                max-width: 61.25rem;
+            }
+
+            @include tablet-md() {
+                max-width: 50rem;
+            }
+
         }
     }
 }

@@ -138,6 +138,7 @@
         z-index: 9;
         width: 100%;
         transition: 0.8s;
+        text-align: center;
 
         a {
             font-size: 10px;
@@ -146,6 +147,10 @@
             width: 50%;
             float: left;
             transition: 0.3s;
+
+            @include tablet-md() {
+                padding: 8px 0px;
+            }
 
             &:hover {
                 background-color: $primary-color;
