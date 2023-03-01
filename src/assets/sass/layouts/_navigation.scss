@@ -64,6 +64,10 @@
 
          &:hover {
              color: $off-blue;
+
+             i:before {
+                 color: $off-blue;
+             }
          }
 
          @include tablet-md() {

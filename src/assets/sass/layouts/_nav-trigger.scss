@@ -247,6 +247,21 @@
                  gap: 15px;
                  align-items: center;
                  color: #7A7A7A;
+
+                 &:hover {
+                     p {
+                         color: #14B1F0;
+                     }
+                 }
+
+                 .icon-user:before {
+                     font-size: 24px;
+                 }
+
+                 i:before {
+                     color: #C4C4C4;
+                     font-size: 24px;
+                 }
              }
 
              p {

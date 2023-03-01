@@ -3,6 +3,17 @@
     background: linear-gradient(180deg, #F3EDC9 0%, #F5F5F5 80%);
     padding-bottom: 35px;
 
+    @include tablet-lg() {
+        .container {
+            padding-left: 0px;
+            padding-right: 0px;
+
+            .item {
+                padding: 0px 15px;
+            }
+        }
+    }
+
     img {
         width: 100%;
         height: auto;
@@ -14,6 +25,10 @@
             margin-left: 7px;
             position: relative;
             transition: 0.3s;
+
+            @include mobile-lg() {
+                margin-left: 4px;
+            }
 
             .category-name-band {
                 background: rgba(254, 249, 249, 0.95);
@@ -126,6 +141,20 @@
             padding-left: 5px;
             padding-right: 5px;
         }
+
+        .container {
+            padding-left: 0px;
+            padding-right: 0px;
+
+            .row {
+                margin: 0px !important;
+            }
+
+            .col-md-4 {
+                padding-left: 20px;
+                padding-right: 20px;
+            }
+        }
     }
 
     img {
@@ -181,6 +210,8 @@
     .deal-of-the-day-carousel {
         @include mobile-lg() {
             margin-top: 30px;
+            padding-left: 10px;
+            padding-right: 10px;
         }
 
         .item {
@@ -427,6 +458,7 @@
 
             @include mobile-lg() {
                 top: -10px;
+                right: 0px;
             }
         }
 
@@ -440,6 +472,7 @@
 
             @include mobile-lg() {
                 top: -10px;
+                right: -30px;
             }
         }
 
@@ -766,6 +799,10 @@
             .scroll_tabs_container .scroll_tab_left_button {
                 position: absolute;
                 right: -20px;
+
+                @include mobile-lg() {
+                    right: -15px;
+                }
             }
 
             .scroll_tabs_container .scroll_tab_right_button {
@@ -983,6 +1020,11 @@
             gap: 35px;
             justify-content: space-between;
             height: 280px;
+            transition: 0.3s;
+
+            &:hover {
+                box-shadow: 0px 1px 13px rgb(0 0 0 / 23%);
+            }
 
             @include tablet-lg() {
                 gap: 15px;
@@ -1235,6 +1277,12 @@
 
         &.one-column {
             position: relative;
+            transition: 0.5s;
+
+
+            &:hover {
+                box-shadow: 0px 1px 13px rgb(0 0 0 / 23%);
+            }
 
             @include desktop-xs() {
                 height: 570px;
@@ -1413,6 +1461,11 @@
                 width: 24%;
                 text-align: center;
                 position: relative;
+                transition: 0.5s;
+
+                &:hover {
+                    box-shadow: 0px 1px 13px rgb(0 0 0 / 15%);
+                }
 
                 @include mobile-lg() {
                     width: 24.3%;
@@ -1570,7 +1623,13 @@
                 padding: 25px;
                 position: relative;
                 border: 1px solid rgba(0, 0, 0, 0.11);
+                transition: 0.5s;
+                border: 3px solid #fff;
 
+                &:hover {
+                    border: 3px solid #0AAEB9;
+                    box-shadow: 0px 1px 15px rgb(0 0 0 / 20%);
+                }
 
 
                 @include tablet-md() {
