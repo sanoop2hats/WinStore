@@ -3153,7 +3153,7 @@ section.icon-section {
 }
 .our-products-sec .our-products-offer-product p {
   color: #000;
-  font-size: 17px;
+  font-size: 18px;
 }
 .our-products-sec .our-products-offer-product .offer-product-price {
   display: flex;
@@ -3164,8 +3164,14 @@ section.icon-section {
 }
 .our-products-sec .our-products-offer-product .offer-product-price h3 {
   color: #D22727;
-  font-size: 24px;
-  margin-bottom: 0px;
+  font-size: 22px;
+  margin-bottom: 5px;
+}
+@media (max-width: 67.5rem) {
+  .our-products-sec .our-products-offer-product .offer-product-price h3 {
+    font-size: 15px;
+    line-height: 1.7;
+  }
 }
 @media (max-width: 61.9375rem) {
   .our-products-sec .our-products-offer-product .offer-product-price h3 {
@@ -3192,7 +3198,8 @@ section.icon-section {
 }
 @media (max-width: 67.5rem) {
   .our-products-sec .our-products-offer-product .offer-product-availability p {
-    font-size: 14px;
+    font-size: 13px;
+    line-height: 17px;
   }
 }
 .our-products-sec .product-category-tabs-content {
@@ -3469,6 +3476,7 @@ section.icon-section {
 @media (max-width: 67.5rem) {
   .best-deal-sec .offer-poster h3 {
     font-size: 15px;
+    line-height: 1.7;
   }
 }
 @media (max-width: 47.9375rem) {
@@ -3568,7 +3576,7 @@ section.icon-section {
 .best-deal-sec .offer-poster .two-column.offer-poster-style-2 p.already-sold {
   margin-top: 0px;
   color: #0AAEB9;
-  font-size: 13px;
+  font-size: 15px;
   line-height: 21px;
 }
 @media (max-width: 67.5rem) {
@@ -4150,6 +4158,7 @@ section.icon-section {
 @media (max-width: 67.5rem) {
   .new-arrival-bottom-sec .new-arrival-bottom-bg .new-arrival-offer-block .new-arrival-offer-box .offer-product-price h3 {
     font-size: 15px;
+    line-height: 1.7;
   }
 }
 @media (max-width: 47.9375rem) {
