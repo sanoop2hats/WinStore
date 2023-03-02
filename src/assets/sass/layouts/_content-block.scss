@@ -699,7 +699,7 @@
 
         p {
             color: $black-color;
-            font-size: 17px;
+            font-size: 18px;
         }
 
         .offer-product-price {
@@ -712,8 +712,14 @@
 
             h3 {
                 color: $red;
-                font-size: 24px;
-                margin-bottom: 0px;
+                font-size: 22px;
+                margin-bottom: 5px;
+
+                @include tablet-lg() {
+                    font-size: 15px;
+                    line-height: 1.7;
+
+                }
 
                 @include tablet-md() {
                     font-size: 15px;
@@ -740,7 +746,8 @@
                 font-size: 17px;
 
                 @include tablet-lg() {
-                    font-size: 14px;
+                    font-size: 13px;
+                    line-height: 17px;
                 }
             }
         }
@@ -1055,6 +1062,7 @@
 
             @include tablet-lg() {
                 font-size: 15px;
+                line-height: 1.7;
 
             }
 
@@ -1164,7 +1172,7 @@
                 p.already-sold {
                     margin-top: 0px;
                     color: $light-blue;
-                    font-size: 13px;
+                    font-size: 15px;
                     line-height: 21px;
 
                     @include tablet-lg() {
@@ -1762,6 +1770,7 @@
 
                         @include tablet-lg() {
                             font-size: 15px;
+                            line-height: 1.7;
                         }
 
                         @include mobile-lg() {
