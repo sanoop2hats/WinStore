@@ -9,8 +9,6 @@
             background-position: right center;
             background-repeat: no-repeat;
 
-
-
             @include desktop-xs() {
                 height: 420px;
                 background-position-x: -550px !important;
@@ -94,12 +92,6 @@
                     line-height: 53px;
                     margin-bottom: 15px;
 
-                    // @include desktop-xs() {
-                    //     font-size: 40px;
-                    //     line-height: 37px;
-                    // }
-
-
 
                     @include tablet-lg() {
                         font-size: 30px;
@@ -179,9 +171,6 @@
 
             }
         }
-
-
-
 
     }
 }

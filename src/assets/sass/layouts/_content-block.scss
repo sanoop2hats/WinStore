@@ -203,8 +203,6 @@
         }
 
         p {
-            // font-size: 12px;
-            // line-height: 15px;
             color: $black-color;
 
             @include mobile-lg() {
@@ -834,8 +832,6 @@
 
         .product-category-tabs {
             width: 65%;
-            // overflow: hidden;
-            // margin-left: -30px;
             position: relative;
             height: 60px;
 
@@ -881,13 +877,9 @@
                 width: 90%;
             }
 
-            // .owl-item{
-
-            // }
             .scroll_tabs_theme_light {
                 border: 0px;
                 flex-wrap: nowrap;
-                // position: absolute;
                 left: 0;
 
                 li {
@@ -957,10 +949,7 @@
                     }
                 }
 
-
             }
-
-
 
         }
 
@@ -982,14 +971,12 @@
             }
 
             @include tablet-lg() {
-                // display: block;
                 position: absolute;
                 right: -70px;
                 top: -15px;
             }
 
             @include tablet-md() {
-                // display: block;
                 position: absolute;
                 right: -70px;
                 top: -15px;
@@ -1014,9 +1001,6 @@
                 width: 100%;
             }
         }
-
-
-
     }
 
     .offer-poster {
@@ -1131,7 +1115,6 @@
 
             .save-percentage-box {
                 background: linear-gradient(90deg, #00C9FF 0%, #92FE9D 100%);
-                // padding: 20px 30px;
                 color: $black-color;
                 text-align: center;
                 margin-top: 10px;
