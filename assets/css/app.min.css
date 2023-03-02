@@ -2988,6 +2988,7 @@ section.icon-section {
 }
 .our-products-sec .product-category-tabs .scroll_tabs_theme_light li {
   width: auto;
+  padding-bottom: 12px;
 }
 @media (max-width: 61.9375rem) {
   .our-products-sec .product-category-tabs .scroll_tabs_theme_light li {
