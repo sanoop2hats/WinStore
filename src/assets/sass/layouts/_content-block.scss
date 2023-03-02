@@ -518,6 +518,7 @@
 
             li {
                 width: auto;
+                padding-bottom: 12px;
 
                 @include tablet-md() {
                     padding-bottom: 10px;
